@@ -1,0 +1,22 @@
+Fitter Status : Successful - Tue May 25 12:54:17 2021
+Quartus Prime Version : 18.1.1 Build 646 04/11/2019 SJ Standard Edition
+Revision Name : TestBench_LS
+Top-level Entity Name : TestBench_LS
+Family : Stratix IV
+Device : EP4SGX530KH40C2
+Timing Models : Final
+Logic utilization : 19 %
+    Combinational ALUTs : 56,954 / 424,960 ( 13 % )
+    Memory ALUTs : 2,402 / 212,480 ( 1 % )
+    Dedicated logic registers : 57,096 / 424,960 ( 13 % )
+Total registers : 58460
+Total pins : 460 / 888 ( 52 % )
+Total virtual pins : 0
+Total block memory bits : 15,113,392 / 21,233,664 ( 71 % )
+DSP block 18-bit elements : 4 / 1,024 ( < 1 % )
+Total GXB Receiver Channel PCS : 0 / 24 ( 0 % )
+Total GXB Receiver Channel PMA : 0 / 36 ( 0 % )
+Total GXB Transmitter Channel PCS : 0 / 24 ( 0 % )
+Total GXB Transmitter Channel PMA : 0 / 36 ( 0 % )
+Total PLLs : 5 / 8 ( 63 % )
+Total DLLs : 2 / 4 ( 50 % )
