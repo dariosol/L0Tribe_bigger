@@ -1,0 +1,580 @@
+Archive member included because of file (symbol)
+
+/cygdrive/c/altera/q91/nios2eds/bin/nios2-gnutools/H-i686-pc-cygwin/bin/../lib/gcc/nios2-elf/3.4.6/mno-hw-mul/libgcc.a(lib2-mul.o)
+                              obj/monitor.o (__mulsi3)
+../monitor_bsp/libhal_bsp.a(alt_main.o)
+                              ../monitor_bsp/obj/HAL/src/crt0.o (alt_main)
+../monitor_bsp/libhal_bsp.a(alt_sys_init.o)
+                              obj/alt_getch_rs232_uart.o (rs232_uart)
+../monitor_bsp/libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+                              obj/alt_getch_jtag_uart.o (altera_avalon_jtag_uart_read)
+../monitor_bsp/libhal_bsp.a(altera_avalon_uart_read.o)
+                              obj/alt_getch_rs232_uart.o (altera_avalon_uart_read)
+../monitor_bsp/libhal_bsp.a(alt_errno.o)
+                              ../monitor_bsp/libhal_bsp.a(altera_avalon_uart_read.o) (alt_errno)
+../monitor_bsp/libhal_bsp.a(altera_nios2_irq.o)
+                              ../monitor_bsp/libhal_bsp.a(alt_sys_init.o) (altera_nios2_irq_init)
+/cygdrive/c/altera/q91/nios2eds/bin/nios2-gnutools/H-i686-pc-cygwin/bin/../lib/gcc/nios2-elf/3.4.6/../../../../nios2-elf/lib/mno-hw-mul/libsmallc.a(int_errno.o)
+                              ../monitor_bsp/libhal_bsp.a(altera_avalon_uart_read.o) (errno)
+
+Allocating common symbols
+Common symbol       size              file
+
+arg                 0x10              obj/monitor.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+reset            0x00002000         0x00000020
+mem              0x00002020         0x00001fe0
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD ../monitor_bsp/obj/HAL/src/crt0.o
+                0x0000200c                exit = _exit
+LOAD obj/alt_getch_jtag_uart.o
+LOAD obj/alt_getch_rs232_uart.o
+LOAD obj/alt_putch_jtag_uart.o
+LOAD obj/alt_putch_rs232_uart.o
+LOAD obj/alt_putstr_jtag_uart.o
+LOAD obj/alt_putstr_rs232_uart.o
+LOAD obj/altera_avalon_jtag_uart_write.o
+LOAD obj/altera_avalon_uart_write.o
+LOAD obj/monitor.o
+LOAD /cygdrive/c/altera/q91/nios2eds/bin/nios2-gnutools/H-i686-pc-cygwin/bin/../lib/gcc/nios2-elf/3.4.6/../../../../nios2-elf/lib/mno-hw-mul/libstdc++.a
+LOAD /cygdrive/c/altera/q91/nios2eds/bin/nios2-gnutools/H-i686-pc-cygwin/bin/../lib/gcc/nios2-elf/3.4.6/../../../../nios2-elf/lib/mno-hw-mul/libm.a
+LOAD /cygdrive/c/altera/q91/nios2eds/bin/nios2-gnutools/H-i686-pc-cygwin/bin/../lib/gcc/nios2-elf/3.4.6/mno-hw-mul/libgcc.a
+START GROUP
+LOAD /cygdrive/c/altera/q91/nios2eds/bin/nios2-gnutools/H-i686-pc-cygwin/bin/../lib/gcc/nios2-elf/3.4.6/../../../../nios2-elf/lib/mno-hw-mul/libsmallc.a
+LOAD /cygdrive/c/altera/q91/nios2eds/bin/nios2-gnutools/H-i686-pc-cygwin/bin/../lib/gcc/nios2-elf/3.4.6/mno-hw-mul/libgcc.a
+LOAD ../monitor_bsp/libhal_bsp.a
+END GROUP
+LOAD /cygdrive/c/altera/q91/nios2eds/bin/nios2-gnutools/H-i686-pc-cygwin/bin/../lib/gcc/nios2-elf/3.4.6/mno-hw-mul/libgcc.a
+                0x00002000                __alt_mem_mem = 0x2000
+
+.entry          0x00002000       0x20
+ *(.entry)
+ .entry         0x00002000       0x20 ../monitor_bsp/obj/HAL/src/crt0.o
+                0x00002000                __reset
+                0x0000200c                _exit
+
+.exceptions     0x00002020        0x0
+                0x00002020                PROVIDE (__ram_exceptions_start, <code 336> (.))
+                0x00002020                . = ALIGN (0x20)
+ *(.irq)
+ *(.exceptions.entry.label)
+ *(.exceptions.entry.user)
+ *(.exceptions.entry)
+ *(.exceptions.irqtest.user)
+ *(.exceptions.irqtest)
+ *(.exceptions.irqhandler.user)
+ *(.exceptions.irqhandler)
+ *(.exceptions.irqreturn.user)
+ *(.exceptions.irqreturn)
+ *(.exceptions.notirq.label)
+ *(.exceptions.notirq.user)
+ *(.exceptions.notirq)
+ *(.exceptions.soft.user)
+ *(.exceptions.soft)
+ *(.exceptions.unknown.user)
+ *(.exceptions.unknown)
+ *(.exceptions.exit.label)
+ *(.exceptions.exit.user)
+ *(.exceptions.exit)
+ *(.exceptions)
+                0x00002020                PROVIDE (__ram_exceptions_end, <code 336> (.))
+                0x00002020                PROVIDE (__flash_exceptions_start, LOADADDR (.exceptions))
+
+.text           0x00002020     0x13fc
+                0x00002020                PROVIDE (stext, <code 336> (.))
+ *(.interp)
+ *(.hash)
+ *(.dynsym)
+ *(.dynstr)
+ *(.gnu.version)
+ *(.gnu.version_d)
+ *(.gnu.version_r)
+ *(.rel.init)
+ *(.rela.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rel.fini)
+ *(.rela.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rela.ctors)
+ *(.rel.dtors)
+ *(.rela.dtors)
+ *(.rel.got)
+ *(.rela.got)
+ *(.rel.sdata .rel.sdata.* .rel.gnu.linkonce.s.*)
+ *(.rela.sdata .rela.sdata.* .rela.gnu.linkonce.s.*)
+ *(.rel.sbss .rel.sbss.* .rel.gnu.linkonce.sb.*)
+ *(.rela.sbss .rela.sbss.* .rela.gnu.linkonce.sb.*)
+ *(.rel.sdata2 .rel.sdata2.* .rel.gnu.linkonce.s2.*)
+ *(.rela.sdata2 .rela.sdata2.* .rela.gnu.linkonce.s2.*)
+ *(.rel.sbss2 .rel.sbss2.* .rel.gnu.linkonce.sb2.*)
+ *(.rela.sbss2 .rela.sbss2.* .rela.gnu.linkonce.sb2.*)
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+ *(.rel.plt)
+ *(.rela.plt)
+ *(.init)
+ *(.plt)
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x00002020       0x38 ../monitor_bsp/obj/HAL/src/crt0.o
+                0x00002020                _start
+ .text          0x00002058       0x48 obj/alt_getch_jtag_uart.o
+                0x00002058                alt_getch_jtag_uart
+ .text          0x000020a0       0xd4 obj/alt_getch_rs232_uart.o
+                0x000020a0                alt_getch_rs232_uart
+ .text          0x00002174       0xa8 obj/alt_putch_jtag_uart.o
+                0x00002174                alt_putch_jtag_uart
+                0x000021fc                alt_test_jtag_uart
+ .text          0x0000221c       0xa8 obj/alt_putch_rs232_uart.o
+                0x0000221c                alt_putch_rs232_uart
+                0x000022a4                alt_test_rs232_uart
+ .text          0x000022c4       0xa8 obj/alt_putstr_jtag_uart.o
+                0x000022c4                alt_putstr_jtag_uart
+ .text          0x0000236c       0xa8 obj/alt_putstr_rs232_uart.o
+                0x0000236c                alt_putstr_rs232_uart
+ .text          0x00002414       0x6c obj/altera_avalon_jtag_uart_write.o
+                0x00002414                altera_avalon_jtag_uart_write
+ .text          0x00002480       0x6c obj/altera_avalon_uart_write.o
+                0x00002480                altera_avalon_uart_write
+ .text          0x000024ec      0xdd0 obj/monitor.o
+                0x0000295c                rs232_uart_getch
+                0x00002d84                cmdwrite
+                0x00002fe4                cmdexec
+                0x00002880                jtag_uart_getch
+                0x00002c9c                cmdread
+                0x00002e7c                cmdecho
+                0x00002578                cmdinit
+                0x00002570                R4
+                0x00002c24                msnibble
+                0x000024ec                wait
+                0x00002520                W4
+                0x00002bb0                output_send
+                0x00002ae0                output_putstr
+                0x00002660                idle_function
+                0x000030f8                main
+                0x00002718                eth_putchar
+                0x00002c44                printhex
+                0x00002f8c                header
+                0x00002670                eth_getch
+                0x0000276c                eth_putstr
+                0x000027e4                eth_send
+                0x00002a50                output_putchar
+ .text          0x000032bc       0x28 /cygdrive/c/altera/q91/nios2eds/bin/nios2-gnutools/H-i686-pc-cygwin/bin/../lib/gcc/nios2-elf/3.4.6/mno-hw-mul/libgcc.a(lib2-mul.o)
+                0x000032bc                __mulsi3
+ .text          0x000032e4       0x34 ../monitor_bsp/libhal_bsp.a(alt_main.o)
+                0x000032e4                alt_main
+ .text          0x00003318       0x24 ../monitor_bsp/libhal_bsp.a(alt_sys_init.o)
+                0x00003338                alt_sys_init
+                0x00003318                alt_irq_init
+ .text          0x0000333c       0x60 ../monitor_bsp/libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+                0x0000333c                altera_avalon_jtag_uart_read
+ .text          0x0000339c       0x78 ../monitor_bsp/libhal_bsp.a(altera_avalon_uart_read.o)
+                0x0000339c                altera_avalon_uart_read
+ .text          0x00003414        0x8 ../monitor_bsp/libhal_bsp.a(altera_nios2_irq.o)
+                0x00003414                altera_nios2_irq_init
+ *(.gnu.warning.*)
+ *(.fini)
+                0x0000341c                PROVIDE (__etext, <code 336> (.))
+                0x0000341c                PROVIDE (_etext, <code 336> (.))
+                0x0000341c                PROVIDE (etext, <code 336> (.))
+ *(.eh_frame_hdr)
+                0x0000341c                . = ALIGN (0x4)
+                0x0000341c                PROVIDE (__preinit_array_start, <code 336> (.))
+ *(.preinit_array)
+                0x0000341c                PROVIDE (__preinit_array_end, <code 336> (.))
+                0x0000341c                PROVIDE (__init_array_start, <code 336> (.))
+ *(.init_array)
+                0x0000341c                PROVIDE (__init_array_end, <code 336> (.))
+                0x0000341c                PROVIDE (__fini_array_start, <code 336> (.))
+ *(.fini_array)
+                0x0000341c                PROVIDE (__fini_array_end, <code 336> (.))
+ *(.eh_frame)
+ *(.gcc_except_table)
+ *(.dynamic)
+                0x0000341c                PROVIDE (__CTOR_LIST__, <code 336> (.))
+ *(.ctors)
+ *(SORT(.ctors.*))
+                0x0000341c                PROVIDE (__CTOR_END__, <code 336> (.))
+                0x0000341c                PROVIDE (__DTOR_LIST__, <code 336> (.))
+ *(.dtors)
+ *(SORT(.dtors.*))
+                0x0000341c                PROVIDE (__DTOR_END__, <code 336> (.))
+ *(.jcr)
+                0x0000341c                . = ALIGN (0x4)
+
+.rodata         0x0000341c      0x148
+                0x0000341c                PROVIDE (__ram_rodata_start, <code 336> (.))
+                0x0000341c                . = ALIGN (0x4)
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.str1.4
+                0x0000341c      0x145 obj/monitor.o
+                                0x148 (size before relaxing)
+ *(.rodata1)
+                0x00003564                . = ALIGN (0x4)
+ *fill*         0x00003561        0x3 00
+                0x00003564                PROVIDE (__ram_rodata_end, <code 336> (.))
+                0x0000341c                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
+
+.rwdata         0x00003564       0x18
+                0x00003564                PROVIDE (__ram_rwdata_start, <code 336> (.))
+                0x00003564                . = ALIGN (0x4)
+ *(.got.plt)
+ *(.got)
+ *(.data1)
+ *(.data .data.* .gnu.linkonce.d.*)
+                0x0000b564                _gp = <code 336> ((. + 0x8000))
+                0x0000b564                PROVIDE (gp, _gp)
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ .sdata         0x00003564        0xc ../monitor_bsp/libhal_bsp.a(alt_main.o)
+                0x00003568                alt_argv
+                0x00003564                alt_envp
+                0x0000356c                alt_argc
+ .sdata         0x00003570        0x8 ../monitor_bsp/libhal_bsp.a(alt_sys_init.o)
+                0x00003574                jtag_uart
+                0x00003570                rs232_uart
+ .sdata         0x00003578        0x4 ../monitor_bsp/libhal_bsp.a(alt_errno.o)
+                0x00003578                alt_errno
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+                0x0000357c                . = ALIGN (0x4)
+                0x0000357c                _edata = <code 336> (.)
+                0x0000357c                PROVIDE (edata, <code 336> (.))
+                0x0000357c                PROVIDE (__ram_rwdata_end, <code 336> (.))
+                0x00003564                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
+
+.bss            0x0000357c      0x108
+                0x0000357c                __bss_start = <code 336> (.)
+                0x0000357c                PROVIDE (__sbss_start, <code 336> (.))
+                0x0000357c                PROVIDE (___sbss_start, <code 336> (.))
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ .sbss          0x0000357c        0xc obj/alt_getch_rs232_uart.o
+ .sbss          0x00003588        0x4 obj/altera_avalon_jtag_uart_write.o
+ .sbss          0x0000358c        0x4 obj/altera_avalon_uart_write.o
+ .sbss          0x00003590       0x60 obj/monitor.o
+                0x000035c0                dat
+                0x000035c4                rdata
+                0x000035bc                narg
+                0x000035dc                echo_eth
+                0x000035d0                jtag_uart_ready
+                0x000035d4                rs232_uart_ready
+                0x000035c8                cmd0
+                0x000035d8                echo_flag
+                0x000035e4                echo_port
+                0x000035b4                sts
+                0x000035e0                echo_addr
+                0x000035ec                eth_srcport
+                0x000035b8                argflag
+                0x000035e8                eth_srcaddr
+                0x000035b0                io_stream
+                0x000035cc                cmd1
+ .sbss          0x000035f0        0x4 /cygdrive/c/altera/q91/nios2eds/bin/nios2-gnutools/H-i686-pc-cygwin/bin/../lib/gcc/nios2-elf/3.4.6/../../../../nios2-elf/lib/mno-hw-mul/libsmallc.a(int_errno.o)
+                0x000035f0                errno
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+ *(.scommon)
+                0x000035f4                PROVIDE (__sbss_end, <code 336> (.))
+                0x000035f4                PROVIDE (___sbss_end, <code 336> (.))
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x000035f4       0x40 obj/alt_getch_rs232_uart.o
+ .bss           0x00003634       0x40 obj/monitor.o
+ *(COMMON)
+ COMMON         0x00003674       0x10 obj/monitor.o
+                                  0x0 (size before relaxing)
+                0x00003674                arg
+                0x00003684                . = ALIGN (0x4)
+                0x00003684                __bss_end = <code 336> (.)
+
+.mem            0x00003684        0x0 load address 0x00003684
+                0x00003684                PROVIDE (_alt_partition_mem_start, <code 336> (.))
+ *(.mem. mem.*)
+                0x00003684                . = ALIGN (0x4)
+                0x00003684                PROVIDE (_alt_partition_mem_end, <code 336> (.))
+                0x00003684                _end = <code 336> (.)
+                0x00003684                end = <code 336> (.)
+                0x00003684                __alt_stack_base = <code 336> (.)
+                0x00003684                PROVIDE (_alt_partition_mem_load_addr, LOADADDR (.mem))
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000      0x2ec
+ *(.comment)
+ .comment       0x00000000       0x2c obj/alt_getch_jtag_uart.o
+ .comment       0x0000002c       0x2c obj/alt_getch_rs232_uart.o
+ .comment       0x00000058       0x2c obj/alt_putch_jtag_uart.o
+ .comment       0x00000084       0x2c obj/alt_putch_rs232_uart.o
+ .comment       0x000000b0       0x2c obj/alt_putstr_jtag_uart.o
+ .comment       0x000000dc       0x2c obj/alt_putstr_rs232_uart.o
+ .comment       0x00000108       0x2c obj/altera_avalon_jtag_uart_write.o
+ .comment       0x00000134       0x2c obj/altera_avalon_uart_write.o
+ .comment       0x00000160       0x2c obj/monitor.o
+ .comment       0x0000018c       0x2c /cygdrive/c/altera/q91/nios2eds/bin/nios2-gnutools/H-i686-pc-cygwin/bin/../lib/gcc/nios2-elf/3.4.6/mno-hw-mul/libgcc.a(lib2-mul.o)
+ .comment       0x000001b8       0x2c ../monitor_bsp/libhal_bsp.a(alt_main.o)
+ .comment       0x000001e4       0x2c ../monitor_bsp/libhal_bsp.a(alt_sys_init.o)
+ .comment       0x00000210       0x2c ../monitor_bsp/libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .comment       0x0000023c       0x2c ../monitor_bsp/libhal_bsp.a(altera_avalon_uart_read.o)
+ .comment       0x00000268       0x2c ../monitor_bsp/libhal_bsp.a(alt_errno.o)
+ .comment       0x00000294       0x2c ../monitor_bsp/libhal_bsp.a(altera_nios2_irq.o)
+ .comment       0x000002c0       0x2c /cygdrive/c/altera/q91/nios2eds/bin/nios2-gnutools/H-i686-pc-cygwin/bin/../lib/gcc/nios2-elf/3.4.6/../../../../nios2-elf/lib/mno-hw-mul/libsmallc.a(int_errno.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x208
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x28 ../monitor_bsp/obj/HAL/src/crt0.o
+ .debug_aranges
+                0x00000028       0x20 obj/alt_getch_jtag_uart.o
+ .debug_aranges
+                0x00000048       0x20 obj/alt_getch_rs232_uart.o
+ .debug_aranges
+                0x00000068       0x20 obj/alt_putch_jtag_uart.o
+ .debug_aranges
+                0x00000088       0x20 obj/alt_putch_rs232_uart.o
+ .debug_aranges
+                0x000000a8       0x20 obj/alt_putstr_jtag_uart.o
+ .debug_aranges
+                0x000000c8       0x20 obj/alt_putstr_rs232_uart.o
+ .debug_aranges
+                0x000000e8       0x20 obj/altera_avalon_jtag_uart_write.o
+ .debug_aranges
+                0x00000108       0x20 obj/altera_avalon_uart_write.o
+ .debug_aranges
+                0x00000128       0x20 obj/monitor.o
+ .debug_aranges
+                0x00000148       0x20 /cygdrive/c/altera/q91/nios2eds/bin/nios2-gnutools/H-i686-pc-cygwin/bin/../lib/gcc/nios2-elf/3.4.6/mno-hw-mul/libgcc.a(lib2-mul.o)
+ .debug_aranges
+                0x00000168       0x20 ../monitor_bsp/libhal_bsp.a(alt_main.o)
+ .debug_aranges
+                0x00000188       0x20 ../monitor_bsp/libhal_bsp.a(alt_sys_init.o)
+ .debug_aranges
+                0x000001a8       0x20 ../monitor_bsp/libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_aranges
+                0x000001c8       0x20 ../monitor_bsp/libhal_bsp.a(altera_avalon_uart_read.o)
+ .debug_aranges
+                0x000001e8       0x20 ../monitor_bsp/libhal_bsp.a(altera_nios2_irq.o)
+
+.debug_pubnames
+                0x00000000      0x527
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x2a obj/alt_getch_jtag_uart.o
+ .debug_pubnames
+                0x0000002a       0x2b obj/alt_getch_rs232_uart.o
+ .debug_pubnames
+                0x00000055       0x41 obj/alt_putch_jtag_uart.o
+ .debug_pubnames
+                0x00000096       0x43 obj/alt_putch_rs232_uart.o
+ .debug_pubnames
+                0x000000d9       0x2b obj/alt_putstr_jtag_uart.o
+ .debug_pubnames
+                0x00000104       0x2c obj/alt_putstr_rs232_uart.o
+ .debug_pubnames
+                0x00000130       0x34 obj/altera_avalon_jtag_uart_write.o
+ .debug_pubnames
+                0x00000164       0x2f obj/altera_avalon_uart_write.o
+ .debug_pubnames
+                0x00000193      0x215 obj/monitor.o
+ .debug_pubnames
+                0x000003a8       0x1f /cygdrive/c/altera/q91/nios2eds/bin/nios2-gnutools/H-i686-pc-cygwin/bin/../lib/gcc/nios2-elf/3.4.6/mno-hw-mul/libgcc.a(lib2-mul.o)
+ .debug_pubnames
+                0x000003c7       0x46 ../monitor_bsp/libhal_bsp.a(alt_main.o)
+ .debug_pubnames
+                0x0000040d       0x51 ../monitor_bsp/libhal_bsp.a(alt_sys_init.o)
+ .debug_pubnames
+                0x0000045e       0x33 ../monitor_bsp/libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_pubnames
+                0x00000491       0x2e ../monitor_bsp/libhal_bsp.a(altera_avalon_uart_read.o)
+ .debug_pubnames
+                0x000004bf       0x20 ../monitor_bsp/libhal_bsp.a(alt_errno.o)
+ .debug_pubnames
+                0x000004df       0x2c ../monitor_bsp/libhal_bsp.a(altera_nios2_irq.o)
+ .debug_pubnames
+                0x0000050b       0x1c /cygdrive/c/altera/q91/nios2eds/bin/nios2-gnutools/H-i686-pc-cygwin/bin/../lib/gcc/nios2-elf/3.4.6/../../../../nios2-elf/lib/mno-hw-mul/libsmallc.a(int_errno.o)
+
+.debug_info     0x00000000     0x19ae
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000       0xa2 ../monitor_bsp/obj/HAL/src/crt0.o
+ .debug_info    0x000000a2       0xea obj/alt_getch_jtag_uart.o
+ .debug_info    0x0000018c      0x14b obj/alt_getch_rs232_uart.o
+ .debug_info    0x000002d7      0x134 obj/alt_putch_jtag_uart.o
+ .debug_info    0x0000040b      0x134 obj/alt_putch_rs232_uart.o
+ .debug_info    0x0000053f      0x128 obj/alt_putstr_jtag_uart.o
+ .debug_info    0x00000667      0x128 obj/alt_putstr_rs232_uart.o
+ .debug_info    0x0000078f      0x148 obj/altera_avalon_jtag_uart_write.o
+ .debug_info    0x000008d7      0x174 obj/altera_avalon_uart_write.o
+ .debug_info    0x00000a4b      0x731 obj/monitor.o
+ .debug_info    0x0000117c       0xdb /cygdrive/c/altera/q91/nios2eds/bin/nios2-gnutools/H-i686-pc-cygwin/bin/../lib/gcc/nios2-elf/3.4.6/mno-hw-mul/libgcc.a(lib2-mul.o)
+ .debug_info    0x00001257      0x150 ../monitor_bsp/libhal_bsp.a(alt_main.o)
+ .debug_info    0x000013a7      0x168 ../monitor_bsp/libhal_bsp.a(alt_sys_init.o)
+ .debug_info    0x0000150f      0x163 ../monitor_bsp/libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_info    0x00001672      0x183 ../monitor_bsp/libhal_bsp.a(altera_avalon_uart_read.o)
+ .debug_info    0x000017f5       0xab ../monitor_bsp/libhal_bsp.a(alt_errno.o)
+ .debug_info    0x000018a0       0x8d ../monitor_bsp/libhal_bsp.a(altera_nios2_irq.o)
+ .debug_info    0x0000192d       0x81 /cygdrive/c/altera/q91/nios2eds/bin/nios2-gnutools/H-i686-pc-cygwin/bin/../lib/gcc/nios2-elf/3.4.6/../../../../nios2-elf/lib/mno-hw-mul/libsmallc.a(int_errno.o)
+
+.debug_abbrev   0x00000000      0xc0d
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000       0x10 ../monitor_bsp/obj/HAL/src/crt0.o
+ .debug_abbrev  0x00000010       0x80 obj/alt_getch_jtag_uart.o
+ .debug_abbrev  0x00000090       0xb0 obj/alt_getch_rs232_uart.o
+ .debug_abbrev  0x00000140       0xcc obj/alt_putch_jtag_uart.o
+ .debug_abbrev  0x0000020c       0xcc obj/alt_putch_rs232_uart.o
+ .debug_abbrev  0x000002d8       0xb5 obj/alt_putstr_jtag_uart.o
+ .debug_abbrev  0x0000038d       0xb5 obj/alt_putstr_rs232_uart.o
+ .debug_abbrev  0x00000442       0xd2 obj/altera_avalon_jtag_uart_write.o
+ .debug_abbrev  0x00000514       0xcc obj/altera_avalon_uart_write.o
+ .debug_abbrev  0x000005e0      0x1a1 obj/monitor.o
+ .debug_abbrev  0x00000781       0x6a /cygdrive/c/altera/q91/nios2eds/bin/nios2-gnutools/H-i686-pc-cygwin/bin/../lib/gcc/nios2-elf/3.4.6/mno-hw-mul/libgcc.a(lib2-mul.o)
+ .debug_abbrev  0x000007eb       0xab ../monitor_bsp/libhal_bsp.a(alt_main.o)
+ .debug_abbrev  0x00000896       0xdf ../monitor_bsp/libhal_bsp.a(alt_sys_init.o)
+ .debug_abbrev  0x00000975       0xd4 ../monitor_bsp/libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_abbrev  0x00000a49       0xee ../monitor_bsp/libhal_bsp.a(altera_avalon_uart_read.o)
+ .debug_abbrev  0x00000b37       0x5e ../monitor_bsp/libhal_bsp.a(alt_errno.o)
+ .debug_abbrev  0x00000b95       0x3f ../monitor_bsp/libhal_bsp.a(altera_nios2_irq.o)
+ .debug_abbrev  0x00000bd4       0x39 /cygdrive/c/altera/q91/nios2eds/bin/nios2-gnutools/H-i686-pc-cygwin/bin/../lib/gcc/nios2-elf/3.4.6/../../../../nios2-elf/lib/mno-hw-mul/libsmallc.a(int_errno.o)
+
+.debug_line     0x00000000     0x3ae3
+ *(.debug_line)
+ .debug_line    0x00000000       0x96 ../monitor_bsp/obj/HAL/src/crt0.o
+ .debug_line    0x00000096      0x265 obj/alt_getch_jtag_uart.o
+ .debug_line    0x000002fb      0x303 obj/alt_getch_rs232_uart.o
+ .debug_line    0x000005fe      0x2b8 obj/alt_putch_jtag_uart.o
+ .debug_line    0x000008b6      0x2b9 obj/alt_putch_rs232_uart.o
+ .debug_line    0x00000b6f      0x2d0 obj/alt_putstr_jtag_uart.o
+ .debug_line    0x00000e3f      0x2d1 obj/alt_putstr_rs232_uart.o
+ .debug_line    0x00001110      0x348 obj/altera_avalon_jtag_uart_write.o
+ .debug_line    0x00001458      0x355 obj/altera_avalon_uart_write.o
+ .debug_line    0x000017ad      0xfb2 obj/monitor.o
+ .debug_line    0x0000275f      0x169 /cygdrive/c/altera/q91/nios2eds/bin/nios2-gnutools/H-i686-pc-cygwin/bin/../lib/gcc/nios2-elf/3.4.6/mno-hw-mul/libgcc.a(lib2-mul.o)
+ .debug_line    0x000028c8      0x2e2 ../monitor_bsp/libhal_bsp.a(alt_main.o)
+ .debug_line    0x00002baa      0x2e9 ../monitor_bsp/libhal_bsp.a(alt_sys_init.o)
+ .debug_line    0x00002e93      0x36f ../monitor_bsp/libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_line    0x00003202      0x376 ../monitor_bsp/libhal_bsp.a(altera_avalon_uart_read.o)
+ .debug_line    0x00003578      0x1d7 ../monitor_bsp/libhal_bsp.a(alt_errno.o)
+ .debug_line    0x0000374f      0x1ee ../monitor_bsp/libhal_bsp.a(altera_nios2_irq.o)
+ .debug_line    0x0000393d      0x1a6 /cygdrive/c/altera/q91/nios2eds/bin/nios2-gnutools/H-i686-pc-cygwin/bin/../lib/gcc/nios2-elf/3.4.6/../../../../nios2-elf/lib/mno-hw-mul/libsmallc.a(int_errno.o)
+
+.debug_frame    0x00000000      0x46c
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x2c obj/alt_getch_jtag_uart.o
+ .debug_frame   0x0000002c       0x2c obj/alt_getch_rs232_uart.o
+ .debug_frame   0x00000058       0x40 obj/alt_putch_jtag_uart.o
+ .debug_frame   0x00000098       0x40 obj/alt_putch_rs232_uart.o
+ .debug_frame   0x000000d8       0x30 obj/alt_putstr_jtag_uart.o
+ .debug_frame   0x00000108       0x30 obj/alt_putstr_rs232_uart.o
+ .debug_frame   0x00000138       0x20 obj/altera_avalon_jtag_uart_write.o
+ .debug_frame   0x00000158       0x20 obj/altera_avalon_uart_write.o
+ .debug_frame   0x00000178      0x20c obj/monitor.o
+ .debug_frame   0x00000384       0x20 /cygdrive/c/altera/q91/nios2eds/bin/nios2-gnutools/H-i686-pc-cygwin/bin/../lib/gcc/nios2-elf/3.4.6/mno-hw-mul/libgcc.a(lib2-mul.o)
+ .debug_frame   0x000003a4       0x28 ../monitor_bsp/libhal_bsp.a(alt_main.o)
+ .debug_frame   0x000003cc       0x38 ../monitor_bsp/libhal_bsp.a(alt_sys_init.o)
+ .debug_frame   0x00000404       0x20 ../monitor_bsp/libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+ .debug_frame   0x00000424       0x28 ../monitor_bsp/libhal_bsp.a(altera_avalon_uart_read.o)
+ .debug_frame   0x0000044c       0x20 ../monitor_bsp/libhal_bsp.a(altera_nios2_irq.o)
+
+.debug_str      0x00000000      0x8e2
+ *(.debug_str)
+ .debug_str     0x00000000      0x11e obj/alt_getch_jtag_uart.o
+                                0x161 (size before relaxing)
+ .debug_str     0x0000011e       0x6d obj/alt_getch_rs232_uart.o
+                                0x185 (size before relaxing)
+ .debug_str     0x0000018b       0x58 obj/alt_putch_jtag_uart.o
+                                0x18f (size before relaxing)
+ .debug_str     0x000001e3       0x40 obj/alt_putch_rs232_uart.o
+                                0x18e (size before relaxing)
+ .debug_str     0x00000223       0x2c obj/alt_putstr_jtag_uart.o
+                                0x17e (size before relaxing)
+ .debug_str     0x0000024f       0x2e obj/alt_putstr_rs232_uart.o
+                                0x17c (size before relaxing)
+ .debug_str     0x0000027d       0x75 obj/altera_avalon_jtag_uart_write.o
+                                0x1a2 (size before relaxing)
+ .debug_str     0x000002f2       0x57 obj/altera_avalon_uart_write.o
+                                0x19e (size before relaxing)
+ .debug_str     0x00000349      0x19d obj/monitor.o
+                                0x2ae (size before relaxing)
+ .debug_str     0x000004e6       0x78 /cygdrive/c/altera/q91/nios2eds/bin/nios2-gnutools/H-i686-pc-cygwin/bin/../lib/gcc/nios2-elf/3.4.6/mno-hw-mul/libgcc.a(lib2-mul.o)
+                                0x12e (size before relaxing)
+ .debug_str     0x0000055e       0xe4 ../monitor_bsp/libhal_bsp.a(alt_main.o)
+                                0x1b6 (size before relaxing)
+ .debug_str     0x00000642       0x7d ../monitor_bsp/libhal_bsp.a(alt_sys_init.o)
+                                0x21a (size before relaxing)
+ .debug_str     0x000006bf       0x84 ../monitor_bsp/libhal_bsp.a(altera_avalon_jtag_uart_read.o)
+                                0x1ea (size before relaxing)
+ .debug_str     0x00000743       0x8f ../monitor_bsp/libhal_bsp.a(altera_avalon_uart_read.o)
+                                0x1ef (size before relaxing)
+ .debug_str     0x000007d2       0x4a ../monitor_bsp/libhal_bsp.a(alt_errno.o)
+                                0x148 (size before relaxing)
+ .debug_str     0x0000081c       0x67 ../monitor_bsp/libhal_bsp.a(altera_nios2_irq.o)
+                                0x155 (size before relaxing)
+ .debug_str     0x00000883       0x5f /cygdrive/c/altera/q91/nios2eds/bin/nios2-gnutools/H-i686-pc-cygwin/bin/../lib/gcc/nios2-elf/3.4.6/../../../../nios2-elf/lib/mno-hw-mul/libsmallc.a(int_errno.o)
+                                0x108 (size before relaxing)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_alt_sim_info
+                0x00000000       0x10
+ *(.debug_alt_sim_info)
+ .debug_alt_sim_info
+                0x00000000       0x10 ../monitor_bsp/obj/HAL/src/crt0.o
+                0x00004000                __alt_data_end = 0x4000
+                0x00004000                PROVIDE (__alt_stack_pointer, __alt_data_end)
+                0x00003684                PROVIDE (__alt_stack_limit, __alt_stack_base)
+                0x00003684                PROVIDE (__alt_heap_start, end)
+                0x00004000                PROVIDE (__alt_heap_limit, 0x4000)
+OUTPUT(monitor.elf elf32-littlenios2)

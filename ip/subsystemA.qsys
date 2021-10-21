@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="System" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element FIFO_stream
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+   element dma
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="EP4SGX530KH40C2" />
+ <parameter name="deviceFamily" value="Stratix IV" />
+ <parameter name="deviceSpeedGrade" value="2" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="hideFromIPCatalog" value="false" />
+ <parameter name="lockedInterfaceDefinition" value="" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName" value="" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="testBenchDutName" value="" />
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="false" />
+ <instanceScript></instanceScript>
+ <interface name="dma_clock" internal="dma.clock" type="clock" dir="end" />
+ <interface name="dma_csr" internal="dma.csr" type="avalon" dir="end" />
+ <interface name="dma_csr_irq" internal="dma.csr_irq" type="interrupt" dir="end" />
+ <interface
+   name="dma_descriptor_slave"
+   internal="dma.descriptor_slave"
+   type="avalon"
+   dir="end" />
+ <interface name="dma_mm_read" internal="dma.mm_read" type="avalon" dir="start" />
+ <interface name="dma_reset_n" internal="dma.reset_n" type="reset" dir="end" />
+ <interface
+   name="fifo_stream_avalon_slave_0"
+   internal="FIFO_stream.avalon_slave_0" />
+ <interface
+   name="fifo_stream_clock"
+   internal="FIFO_stream.clock"
+   type="clock"
+   dir="end" />
+ <interface
+   name="fifo_stream_conduit_end"
+   internal="FIFO_stream.conduit_end"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="fifo_stream_reset"
+   internal="FIFO_stream.reset"
+   type="reset"
+   dir="end" />
+ <module name="FIFO_stream" kind="streamFIFO" version="1.6" enabled="1" />
+ <module name="dma" kind="altera_msgdma" version="18.1" enabled="1">
+  <parameter name="AUTO_DESCRIPTOR_READ_MASTER_ADDRESS_MAP" value="" />
+  <parameter
+     name="AUTO_DESCRIPTOR_READ_MASTER_ADDRESS_WIDTH"
+     value="AddressWidth = -1" />
+  <parameter name="AUTO_DESCRIPTOR_WRITE_MASTER_ADDRESS_MAP" value="" />
+  <parameter
+     name="AUTO_DESCRIPTOR_WRITE_MASTER_ADDRESS_WIDTH"
+     value="AddressWidth = -1" />
+  <parameter name="AUTO_DEVICE" value="EP4SGX530KH40C2" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Stratix IV" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="2" />
+  <parameter name="AUTO_MM_READ_ADDRESS_MAP" value="" />
+  <parameter name="AUTO_MM_READ_ADDRESS_WIDTH" value="AddressWidth = -1" />
+  <parameter name="AUTO_MM_WRITE_ADDRESS_MAP" value="" />
+  <parameter name="AUTO_MM_WRITE_ADDRESS_WIDTH" value="AddressWidth = -1" />
+  <parameter name="BURST_ENABLE" value="1" />
+  <parameter name="BURST_WRAPPING_SUPPORT" value="0" />
+  <parameter name="CHANNEL_ENABLE" value="0" />
+  <parameter name="CHANNEL_WIDTH" value="8" />
+  <parameter name="DATA_FIFO_DEPTH" value="4096" />
+  <parameter name="DATA_WIDTH" value="256" />
+  <parameter name="DESCRIPTOR_FIFO_DEPTH" value="1024" />
+  <parameter name="ENHANCED_FEATURES" value="0" />
+  <parameter name="ERROR_ENABLE" value="0" />
+  <parameter name="ERROR_WIDTH" value="8" />
+  <parameter name="EXPOSE_ST_PORT" value="0" />
+  <parameter name="FIX_ADDRESS_WIDTH" value="32" />
+  <parameter name="MAX_BURST_COUNT" value="1024" />
+  <parameter name="MAX_BYTE" value="262144" />
+  <parameter name="MAX_STRIDE" value="1" />
+  <parameter name="MODE" value="1" />
+  <parameter name="PACKET_ENABLE" value="0" />
+  <parameter name="PREFETCHER_DATA_WIDTH" value="32" />
+  <parameter name="PREFETCHER_ENABLE" value="0" />
+  <parameter name="PREFETCHER_MAX_READ_BURST_COUNT" value="2" />
+  <parameter name="PREFETCHER_READ_BURST_ENABLE" value="0" />
+  <parameter name="PROGRAMMABLE_BURST_ENABLE" value="0" />
+  <parameter name="RESPONSE_PORT" value="2" />
+  <parameter name="STRIDE_ENABLE" value="0" />
+  <parameter name="TRANSFER_TYPE">Full Word Accesses Only</parameter>
+  <parameter name="USE_FIX_ADDRESS_WIDTH" value="0" />
+ </module>
+ <connection
+   kind="avalon_streaming"
+   version="18.1"
+   start="dma.st_source"
+   end="FIFO_stream.Avalon_ST" />
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+</system>

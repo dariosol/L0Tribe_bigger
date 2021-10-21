@@ -1,0 +1,18 @@
+13:34:36 **** Build of configuration Nios II for project memtest ****
+make all 
+Info: Building ../testbench_ls_bsp/
+make --no-print-directory -C ../testbench_ls_bsp/
+[BSP build complete]
+Info: Compiling memtest.c to obj/default/memtest.o
+nios2-elf-gcc -xc -MP -MMD -c -I../testbench_ls_bsp//HAL/inc -I../testbench_ls_bsp/ -I../testbench_ls_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global  -o obj/default/memtest.o memtest.c
+Info: Linking memtest.elf
+nios2-elf-g++  -T'../testbench_ls_bsp//linker.x' -msys-crt0='../testbench_ls_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../testbench_ls_bsp/   -Wl,-Map=memtest.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mhw-mulx -mgpopt=global  -o memtest.elf obj/default/memtest.o -lm -msys-lib=m
+nios2-elf-insert memtest.elf --thread_model hal --cpu_name nios_cpu --qsys true --simulation_enabled false --stderr_dev jtag --stdin_dev jtag --stdout_dev jtag --sopc_system_name testbench_ls --quartus_project_dir "/home/na62torino/Data/TestBench_CLONE" --jdi ../..//output_files/TestBench_LS.jdi --sopcinfo /home/na62torino/Data/TestBench_CLONE/software/testbench_ls_bsp/../../testbench_ls.sopcinfo
+Info: (memtest.elf) 130 KBytes program size (code + initialized data).
+Info:               362 KBytes free for stack + heap.
+Info: Creating memtest.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source memtest.elf >memtest.objdump
+[memtest build complete]
+
+13:34:37 Build Finished (took 1s.101ms)
+

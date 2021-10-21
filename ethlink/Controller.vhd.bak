@@ -1,0 +1,71 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use IEEE.NUMERIC_BIT.all;
+use work.userlib.all;
+use work.component_ethlink.all;
+
+
+entity Controller is
+  generic (Ndet : integer := 14);
+  port (
+
+      clkin_50   : in std_logic;
+      clkin_125  : in std_logic;
+      cpu_resetn : in std_logic; 
+      enet_rxp    : in std_logic_vector(0 to ethlink_NODES -1);
+      mdio_sin    : in std_logic_vector(0 to ethlink_NODES -1);
+      USER_DIPSW  : in std_logic_vector(7 donwto 0);  
+      enet_resetn : out std_logic;
+      enet_txp    : out std_logic_vector(0 to ethlink_NODES -1);
+      enet_mdc : out std_logic_vector(0 to ethlink_NODES - 1);   
+      mdio_sout: out std_logic_vector(0 to ethlink_NODES - 1); 
+      mdio_sena: out std_logic_vector(0 to ethlink_NODES - 1);   
+      startdata : in  std_logic;
+      data      : in vector64(0 to ethlink_NODES - 1);
+      sendflag  : ins td_logic_vector(0 to ethlink_NODES - 1);
+
+        );
+end Controller;
+
+architecture rtl of Controller is
+
+ 
+
+begin
+
+
+
+  ethlink_inst : ethlink port map
+    (
+      inputs.clkin_50   => clkin_50,
+      inputs.clkin_125   => clkin_125,
+      inputs.cpu_resetn => cpu_resetn,
+      inputs.enet_rxp   => enet_rxp,
+      inputs.mdio_sin   => mdio_sin,
+      inputs.USER_DIPSW => USER_DIPSW,
+      inputs.startdata  => startdata,
+--
+      outputs.enet_resetn => enet_resetn,
+      outputs.enet_txp    => enet_txp,
+      outputs.enet_mdc    => enet_mdc,
+      outputs.mdio_sout   => mdio_sout,
+      outputs.mdio_sena   => mdio_sena,
+      inputs.sendflag => sendflag,
+      inputs.data => data   
+      );
+
+
+  IOBUF : for index in 0 to ethlink_NODES-1 generate
+    IOBUF : altiobuf1 port map
+      (
+        datain(0)  => mdio_sout(index),
+        oe(0)      => mdio_sena(index),
+        dataout(0) => mdio_sin(index),
+        dataio(0)  => ETH_MDIO(index)
+        );
+  end generate;
+
+
+
+ 
+end rtl;

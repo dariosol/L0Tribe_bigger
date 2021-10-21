@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="nios">
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element jtag_uart.avalon_jtag_slave
+   {
+      datum baseAddress
+      {
+         value = "2048";
+         type = "long";
+      }
+   }
+   element clk1
+   {
+      datum _sortIndex
+      {
+         value = "20";
+         type = "int";
+      }
+   }
+   element cpu
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+      datum megawizard_uipreferences
+      {
+         value = "{}";
+         type = "String";
+      }
+   }
+   element iobusMAC_0
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
+   element iobusMAC_1
+   {
+      datum _sortIndex
+      {
+         value = "5";
+         type = "int";
+      }
+   }
+   element iobusMAC_2
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
+   element iobusMAC_3
+   {
+      datum _sortIndex
+      {
+         value = "7";
+         type = "int";
+      }
+   }
+   element iobusMAC_4
+   {
+      datum _sortIndex
+      {
+         value = "8";
+         type = "int";
+      }
+   }
+   element iobusMAC_5
+   {
+      datum _sortIndex
+      {
+         value = "9";
+         type = "int";
+      }
+   }
+   element iobusMAC_6
+   {
+      datum _sortIndex
+      {
+         value = "10";
+         type = "int";
+      }
+   }
+   element iobusMAC_7
+   {
+      datum _sortIndex
+      {
+         value = "11";
+         type = "int";
+      }
+   }
+   element iobusMDIO_0
+   {
+      datum _sortIndex
+      {
+         value = "12";
+         type = "int";
+      }
+   }
+   element iobusMDIO_1
+   {
+      datum _sortIndex
+      {
+         value = "13";
+         type = "int";
+      }
+   }
+   element iobusMDIO_2
+   {
+      datum _sortIndex
+      {
+         value = "14";
+         type = "int";
+      }
+   }
+   element iobusMDIO_3
+   {
+      datum _sortIndex
+      {
+         value = "15";
+         type = "int";
+      }
+   }
+   element iobusMDIO_4
+   {
+      datum _sortIndex
+      {
+         value = "16";
+         type = "int";
+      }
+   }
+   element iobusMDIO_5
+   {
+      datum _sortIndex
+      {
+         value = "17";
+         type = "int";
+      }
+   }
+   element iobusMDIO_6
+   {
+      datum _sortIndex
+      {
+         value = "18";
+         type = "int";
+      }
+   }
+   element iobusMDIO_7
+   {
+      datum _sortIndex
+      {
+         value = "19";
+         type = "int";
+      }
+   }
+   element iobusREGFILE_0
+   {
+      datum _sortIndex
+      {
+         value = "21";
+         type = "int";
+      }
+   }
+   element cpu.jtag_debug_module
+   {
+      datum baseAddress
+      {
+         value = "0";
+         type = "long";
+      }
+   }
+   element jtag_uart
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+      datum megawizard_uipreferences
+      {
+         value = "{}";
+         type = "String";
+      }
+   }
+   element mem
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+      datum megawizard_uipreferences
+      {
+         value = "{}";
+         type = "String";
+      }
+   }
+   element nios
+   {
+   }
+   element rs232_uart
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+      datum megawizard_uipreferences
+      {
+         value = "{}";
+         type = "String";
+      }
+   }
+   element rs232_uart.s1
+   {
+      datum baseAddress
+      {
+         value = "2080";
+         type = "long";
+      }
+   }
+   element mem.s1
+   {
+      datum baseAddress
+      {
+         value = "8192";
+         type = "long";
+      }
+   }
+   element iobusMAC_7.slave
+   {
+      datum baseAddress
+      {
+         value = "2560";
+         type = "long";
+      }
+   }
+   element iobusMAC_6.slave
+   {
+      datum baseAddress
+      {
+         value = "2496";
+         type = "long";
+      }
+   }
+   element iobusMAC_4.slave
+   {
+      datum baseAddress
+      {
+         value = "2368";
+         type = "long";
+      }
+   }
+   element iobusREGFILE_0.slave
+   {
+      datum baseAddress
+      {
+         value = "4096";
+         type = "long";
+      }
+   }
+   element iobusMDIO_3.slave
+   {
+      datum baseAddress
+      {
+         value = "2864";
+         type = "long";
+      }
+   }
+   element iobusMDIO_7.slave
+   {
+      datum baseAddress
+      {
+         value = "2928";
+         type = "long";
+      }
+   }
+   element iobusMDIO_2.slave
+   {
+      datum baseAddress
+      {
+         value = "2848";
+         type = "long";
+      }
+   }
+   element iobusMDIO_0.slave
+   {
+      datum baseAddress
+      {
+         value = "2816";
+         type = "long";
+      }
+   }
+   element iobusMAC_5.slave
+   {
+      datum baseAddress
+      {
+         value = "2432";
+         type = "long";
+      }
+   }
+   element iobusMDIO_1.slave
+   {
+      datum baseAddress
+      {
+         value = "2832";
+         type = "long";
+      }
+   }
+   element iobusMAC_1.slave
+   {
+      datum baseAddress
+      {
+         value = "2176";
+         type = "long";
+      }
+   }
+   element iobusMAC_0.slave
+   {
+      datum baseAddress
+      {
+         value = "2112";
+         type = "long";
+      }
+   }
+   element iobusMAC_2.slave
+   {
+      datum baseAddress
+      {
+         value = "2240";
+         type = "long";
+      }
+   }
+   element iobusMAC_3.slave
+   {
+      datum baseAddress
+      {
+         value = "2304";
+         type = "long";
+      }
+   }
+   element iobusMDIO_6.slave
+   {
+      datum baseAddress
+      {
+         value = "2912";
+         type = "long";
+      }
+   }
+   element iobusMDIO_4.slave
+   {
+      datum baseAddress
+      {
+         value = "2880";
+         type = "long";
+      }
+   }
+   element iobusMDIO_5.slave
+   {
+      datum baseAddress
+      {
+         value = "2896";
+         type = "long";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="deviceFamily" value="STRATIXIV" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="hardcopyCompatible" value="false" />
+ <parameter name="hdlLanguage" value="VHDL" />
+ <parameter name="projectName" value="" />
+ <parameter name="systemHash" value="-47919612376" />
+ <parameter name="timeStamp" value="1404824675394" />
+ <module name="clk1" kind="clock_source" version="9.1" enabled="1">
+  <parameter name="clockFrequency" value="50000000" />
+  <parameter name="clockFrequencyKnown" value="true" />
+ </module>
+ <module name="cpu" kind="altera_nios2" version="9.1" enabled="1">
+  <parameter name="userDefinedSettings" value="" />
+  <parameter name="setting_showUnpublishedSettings" value="false" />
+  <parameter name="setting_showInternalSettings" value="false" />
+  <parameter name="setting_shadowRegisterSets" value="0" />
+  <parameter name="setting_preciseSlaveAccessErrorException" value="false" />
+  <parameter name="setting_preciseIllegalMemAccessException" value="false" />
+  <parameter name="setting_preciseDivisionErrorException" value="false" />
+  <parameter name="setting_performanceCounter" value="false" />
+  <parameter name="setting_perfCounterWidth" value="_32" />
+  <parameter name="setting_interruptControllerType" value="Internal" />
+  <parameter name="setting_illegalMemAccessDetection" value="false" />
+  <parameter name="setting_illegalInstructionsTrap" value="false" />
+  <parameter name="setting_fullWaveformSignals" value="false" />
+  <parameter name="setting_extraExceptionInfo" value="false" />
+  <parameter name="setting_exportPCB" value="false" />
+  <parameter name="setting_debugSimGen" value="false" />
+  <parameter name="setting_clearXBitsLDNonBypass" value="true" />
+  <parameter name="setting_branchPredictionType" value="Automatic" />
+  <parameter name="setting_bit31BypassDCache" value="true" />
+  <parameter name="setting_bigEndian" value="false" />
+  <parameter name="setting_bhtPtrSz" value="_8" />
+  <parameter name="setting_bhtIndexPcOnly" value="false" />
+  <parameter name="setting_avalonDebugPortPresent" value="false" />
+  <parameter name="setting_alwaysEncrypt" value="true" />
+  <parameter name="setting_allowFullAddressRange" value="false" />
+  <parameter name="setting_activateTrace" value="true" />
+  <parameter name="setting_activateTestEndChecker" value="false" />
+  <parameter name="setting_activateMonitors" value="true" />
+  <parameter name="setting_activateModelChecker" value="false" />
+  <parameter name="setting_HDLSimCachesCleared" value="true" />
+  <parameter name="setting_HBreakTest" value="false" />
+  <parameter name="resetSlave" value="mem.s1" />
+  <parameter name="resetOffset" value="0" />
+  <parameter name="muldiv_multiplierType" value="DSPBlock" />
+  <parameter name="muldiv_divider" value="false" />
+  <parameter name="mpu_useLimit" value="false" />
+  <parameter name="mpu_numOfInstRegion" value="8" />
+  <parameter name="mpu_numOfDataRegion" value="8" />
+  <parameter name="mpu_minInstRegionSize" value="_12" />
+  <parameter name="mpu_minDataRegionSize" value="_12" />
+  <parameter name="mpu_enabled" value="false" />
+  <parameter name="mmu_uitlbNumEntries" value="_4" />
+  <parameter name="mmu_udtlbNumEntries" value="_6" />
+  <parameter name="mmu_tlbPtrSz" value="_7" />
+  <parameter name="mmu_tlbNumWays" value="_16" />
+  <parameter name="mmu_processIDNumBits" value="_8" />
+  <parameter name="mmu_enabled" value="false" />
+  <parameter name="mmu_autoAssignTlbPtrSz" value="true" />
+  <parameter name="mmu_TLBMissExcSlave" value="" />
+  <parameter name="mmu_TLBMissExcOffset" value="0" />
+  <parameter name="manuallyAssignCpuID" value="false" />
+  <parameter name="impl" value="Tiny" />
+  <parameter name="icache_size" value="_4096" />
+  <parameter name="icache_ramBlockType" value="Automatic" />
+  <parameter name="icache_numTCIM" value="_0" />
+  <parameter name="icache_burstType" value="None" />
+  <parameter name="exceptionSlave" value="mem.s1" />
+  <parameter name="exceptionOffset" value="32" />
+  <parameter name="debug_triggerArming" value="true" />
+  <parameter name="debug_level" value="Level1" />
+  <parameter name="debug_jtagInstanceID" value="0" />
+  <parameter name="debug_embeddedPLL" value="true" />
+  <parameter name="debug_debugReqSignals" value="false" />
+  <parameter name="debug_assignJtagInstanceID" value="false" />
+  <parameter name="debug_OCIOnchipTrace" value="_128" />
+  <parameter name="dcache_size" value="_2048" />
+  <parameter name="dcache_ramBlockType" value="Automatic" />
+  <parameter name="dcache_omitDataMaster" value="false" />
+  <parameter name="dcache_numTCDM" value="_0" />
+  <parameter name="dcache_lineSize" value="_32" />
+  <parameter name="dcache_bursts" value="false" />
+  <parameter name="cpuReset" value="false" />
+  <parameter name="cpuID" value="0" />
+  <parameter name="breakSlave">cpu.jtag_debug_module</parameter>
+  <parameter name="breakOffset" value="32" />
+ </module>
+ <module
+   name="mem"
+   kind="altera_avalon_onchip_memory2"
+   version="9.1"
+   enabled="1">
+  <parameter name="allowInSystemMemoryContentEditor" value="false" />
+  <parameter name="blockType" value="AUTO" />
+  <parameter name="dataWidth" value="32" />
+  <parameter name="dualPort" value="false" />
+  <parameter name="initMemContent" value="true" />
+  <parameter name="initializationFileName" value="mem" />
+  <parameter name="instanceID" value="NONE" />
+  <parameter name="memorySize" value="8192" />
+  <parameter name="readDuringWriteMode" value="DONT_CARE" />
+  <parameter name="simAllowMRAMContentsFile" value="false" />
+  <parameter name="slave1Latency" value="1" />
+  <parameter name="slave2Latency" value="1" />
+  <parameter name="useNonDefaultInitFile" value="true" />
+  <parameter name="useShallowMemBlocks" value="false" />
+  <parameter name="writable" value="true" />
+ </module>
+ <module
+   name="jtag_uart"
+   kind="altera_avalon_jtag_uart"
+   version="9.1"
+   enabled="1">
+  <parameter name="allowMultipleConnections" value="false" />
+  <parameter name="hubInstanceID" value="0" />
+  <parameter name="readBufferDepth" value="64" />
+  <parameter name="readIRQThreshold" value="8" />
+  <parameter name="simInputCharacterStream" value="" />
+  <parameter name="simInteractiveOptions">NO_INTERACTIVE_WINDOWS</parameter>
+  <parameter name="useRegistersForReadBuffer" value="false" />
+  <parameter name="useRegistersForWriteBuffer" value="false" />
+  <parameter name="useRelativePathForSimFile" value="false" />
+  <parameter name="writeBufferDepth" value="64" />
+  <parameter name="writeIRQThreshold" value="8" />
+ </module>
+ <module name="rs232_uart" kind="altera_avalon_uart" version="9.1" enabled="1">
+  <parameter name="baud" value="115200" />
+  <parameter name="dataBits" value="8" />
+  <parameter name="fixedBaud" value="true" />
+  <parameter name="parity" value="NONE" />
+  <parameter name="simCharStream" value="" />
+  <parameter name="simInteractiveInputEnable" value="false" />
+  <parameter name="simInteractiveOutputEnable" value="false" />
+  <parameter name="simTrueBaud" value="false" />
+  <parameter name="stopBits" value="1" />
+  <parameter name="syncRegDepth" value="2" />
+  <parameter name="useCtsRts" value="false" />
+  <parameter name="useEopRegister" value="false" />
+  <parameter name="useRelativePathForSimFile" value="false" />
+ </module>
+ <module name="iobusMAC_0" kind="MMslaveint" version="1.0" enabled="1">
+  <parameter name="ADDRSIZE" value="4" />
+ </module>
+ <module name="iobusMAC_1" kind="MMslaveint" version="1.0" enabled="1">
+  <parameter name="ADDRSIZE" value="4" />
+ </module>
+ <module name="iobusMAC_2" kind="MMslaveint" version="1.0" enabled="1">
+  <parameter name="ADDRSIZE" value="4" />
+ </module>
+ <module name="iobusMAC_3" kind="MMslaveint" version="1.0" enabled="1">
+  <parameter name="ADDRSIZE" value="4" />
+ </module>
+ <module name="iobusMAC_4" kind="MMslaveint" version="1.0" enabled="1">
+  <parameter name="ADDRSIZE" value="4" />
+ </module>
+ <module name="iobusMAC_5" kind="MMslaveint" version="1.0" enabled="1">
+  <parameter name="ADDRSIZE" value="4" />
+ </module>
+ <module name="iobusMAC_6" kind="MMslaveint" version="1.0" enabled="1">
+  <parameter name="ADDRSIZE" value="4" />
+ </module>
+ <module name="iobusMAC_7" kind="MMslaveint" version="1.0" enabled="1">
+  <parameter name="ADDRSIZE" value="4" />
+ </module>
+ <module name="iobusMDIO_0" kind="MMslaveint" version="1.0" enabled="1">
+  <parameter name="ADDRSIZE" value="2" />
+ </module>
+ <module name="iobusMDIO_1" kind="MMslaveint" version="1.0" enabled="1">
+  <parameter name="ADDRSIZE" value="2" />
+ </module>
+ <module name="iobusMDIO_2" kind="MMslaveint" version="1.0" enabled="1">
+  <parameter name="ADDRSIZE" value="2" />
+ </module>
+ <module name="iobusMDIO_3" kind="MMslaveint" version="1.0" enabled="1">
+  <parameter name="ADDRSIZE" value="2" />
+ </module>
+ <module name="iobusMDIO_4" kind="MMslaveint" version="1.0" enabled="1">
+  <parameter name="ADDRSIZE" value="2" />
+ </module>
+ <module name="iobusMDIO_5" kind="MMslaveint" version="1.0" enabled="1">
+  <parameter name="ADDRSIZE" value="2" />
+ </module>
+ <module name="iobusMDIO_6" kind="MMslaveint" version="1.0" enabled="1">
+  <parameter name="ADDRSIZE" value="2" />
+ </module>
+ <module name="iobusMDIO_7" kind="MMslaveint" version="1.0" enabled="1">
+  <parameter name="ADDRSIZE" value="2" />
+ </module>
+ <module name="iobusREGFILE_0" kind="MMslaveint" version="1.0" enabled="1">
+  <parameter name="ADDRSIZE" value="4" />
+ </module>
+ <connection kind="clock" version="9.1" start="clk1.clk" end="cpu.clk" />
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="cpu.instruction_master"
+   end="cpu.jtag_debug_module">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="cpu.data_master"
+   end="cpu.jtag_debug_module">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+ </connection>
+ <connection kind="clock" version="9.1" start="clk1.clk" end="mem.clk1" />
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="cpu.instruction_master"
+   end="mem.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x2000" />
+ </connection>
+ <connection kind="avalon" version="6.1" start="cpu.data_master" end="mem.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x2000" />
+ </connection>
+ <connection kind="clock" version="9.1" start="clk1.clk" end="jtag_uart.clk" />
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="cpu.data_master"
+   end="jtag_uart.avalon_jtag_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0800" />
+ </connection>
+ <connection kind="interrupt" version="9.1" start="cpu.d_irq" end="jtag_uart.irq">
+  <parameter name="irqNumber" value="0" />
+ </connection>
+ <connection kind="clock" version="9.1" start="clk1.clk" end="rs232_uart.clk" />
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="cpu.data_master"
+   end="rs232_uart.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0820" />
+ </connection>
+ <connection kind="interrupt" version="9.1" start="cpu.d_irq" end="rs232_uart.irq">
+  <parameter name="irqNumber" value="1" />
+ </connection>
+ <connection kind="clock" version="9.1" start="clk1.clk" end="iobusMAC_0.clock" />
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="cpu.data_master"
+   end="iobusMAC_0.slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0840" />
+ </connection>
+ <connection kind="clock" version="9.1" start="clk1.clk" end="iobusMAC_1.clock" />
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="cpu.data_master"
+   end="iobusMAC_1.slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0880" />
+ </connection>
+ <connection kind="clock" version="9.1" start="clk1.clk" end="iobusMAC_2.clock" />
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="cpu.data_master"
+   end="iobusMAC_2.slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x08c0" />
+ </connection>
+ <connection kind="clock" version="9.1" start="clk1.clk" end="iobusMAC_3.clock" />
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="cpu.data_master"
+   end="iobusMAC_3.slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0900" />
+ </connection>
+ <connection kind="clock" version="9.1" start="clk1.clk" end="iobusMAC_4.clock" />
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="cpu.data_master"
+   end="iobusMAC_4.slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0940" />
+ </connection>
+ <connection kind="clock" version="9.1" start="clk1.clk" end="iobusMAC_5.clock" />
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="cpu.data_master"
+   end="iobusMAC_5.slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0980" />
+ </connection>
+ <connection kind="clock" version="9.1" start="clk1.clk" end="iobusMAC_6.clock" />
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="cpu.data_master"
+   end="iobusMAC_6.slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x09c0" />
+ </connection>
+ <connection kind="clock" version="9.1" start="clk1.clk" end="iobusMAC_7.clock" />
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="cpu.data_master"
+   end="iobusMAC_7.slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0a00" />
+ </connection>
+ <connection kind="clock" version="9.1" start="clk1.clk" end="iobusMDIO_0.clock" />
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="cpu.data_master"
+   end="iobusMDIO_0.slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0b00" />
+ </connection>
+ <connection kind="clock" version="9.1" start="clk1.clk" end="iobusMDIO_1.clock" />
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="cpu.data_master"
+   end="iobusMDIO_1.slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0b10" />
+ </connection>
+ <connection kind="clock" version="9.1" start="clk1.clk" end="iobusMDIO_2.clock" />
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="cpu.data_master"
+   end="iobusMDIO_2.slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0b20" />
+ </connection>
+ <connection kind="clock" version="9.1" start="clk1.clk" end="iobusMDIO_3.clock" />
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="cpu.data_master"
+   end="iobusMDIO_3.slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0b30" />
+ </connection>
+ <connection kind="clock" version="9.1" start="clk1.clk" end="iobusMDIO_4.clock" />
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="cpu.data_master"
+   end="iobusMDIO_4.slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0b40" />
+ </connection>
+ <connection kind="clock" version="9.1" start="clk1.clk" end="iobusMDIO_5.clock" />
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="cpu.data_master"
+   end="iobusMDIO_5.slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0b50" />
+ </connection>
+ <connection kind="clock" version="9.1" start="clk1.clk" end="iobusMDIO_6.clock" />
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="cpu.data_master"
+   end="iobusMDIO_6.slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0b60" />
+ </connection>
+ <connection kind="clock" version="9.1" start="clk1.clk" end="iobusMDIO_7.clock" />
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="cpu.data_master"
+   end="iobusMDIO_7.slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0b70" />
+ </connection>
+ <connection
+   kind="clock"
+   version="9.1"
+   start="clk1.clk"
+   end="iobusREGFILE_0.clock" />
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="cpu.data_master"
+   end="iobusREGFILE_0.slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x1000" />
+ </connection>
+</system>

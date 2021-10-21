@@ -1,0 +1,80 @@
+--
+--
+-- NIOS2 IDE: how to generate .hex file
+--
+--
+
+Project 'Monitor' --> Properties (rigth click) --> Make Targets 
+
+--> create a new Make target (if not exists)
+    Target Name: mem_init_install 
+    Make Target: mem_init_install
+
+--> build 'mem_init_install'
+
+--- NIOS2 console
+**** Build of configuration Nios II for project monitor ****
+
+make mem_init_install 
+Info: Building ../monitor_bsp
+make --no-print-directory -C ../monitor_bsp
+[BSP build complete]
+Post-processing to create mem_init/mem.hex...
+elf2hex monitor.elf 0x00001000 0x00001fff --width=32 \
+	--create-lanes=0   mem_init/mem.hex
+Post-processing to create mem_init/hdl_sim/mem.dat...
+elf2dat --infile=monitor.elf --outfile=mem_init/hdl_sim/mem.dat \
+	--base=0x00001000 --end=0x00001fff --width=32 \
+	--create-lanes=0  
+Post-processing to create mem_init/hdl_sim/mem.sym...
+nios2-elf-nm -n monitor.elf > mem_init/hdl_sim/mem.sym
+`mem_init/mem.hex' -> `../../mem.hex'
+`mem_init/hdl_sim/mem.dat' -> `../..//nios_sim/mem.dat'
+`mem_init/hdl_sim/mem.sym' -> `../..//nios_sim/mem.sym'
+--- NIOS2 console
+
+a) elf2hex creates new .hex file in sopc/software/monitor/mem_init;
+b) .hex file is copied to sopc folder     
+
+
+--
+--
+-- Quartus: how to update .sof
+--
+--
+
+--> Quartus Processing/Update Memory Initialization File:
+
+--- Messages
+Info: *******************************************************************
+Info: Running Quartus II MIF/HEX Update
+	Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+	Info: Processing started: Sun Apr 25 01:16:49 2010
+Info: Command: quartus_cdb gtkto -c gtkto --update_mif
+Warning: Width of data items in "mem.hex" is greater than the memory width. Wrapping data items to subsequent addresses. Found 128 warnings, reporting 10
+	Warning: Data at line (2) of memory initialization file "mem.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+	Warning: Data at line (3) of memory initialization file "mem.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+	Warning: Data at line (4) of memory initialization file "mem.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+	Warning: Data at line (5) of memory initialization file "mem.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+	Warning: Data at line (6) of memory initialization file "mem.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+	Warning: Data at line (7) of memory initialization file "mem.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+	Warning: Data at line (8) of memory initialization file "mem.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+	Warning: Data at line (9) of memory initialization file "mem.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+	Warning: Data at line (10) of memory initialization file "mem.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+	Warning: Data at line (11) of memory initialization file "mem.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+Info: Processed the following Memory Initialization File(s)
+	Info: Processed Memory Initialization File C:/Stefano/A-work/stx3-q91/gtkto1/sopc/cpu_ociram_default_contents.mif
+	Info: Processed Memory Initialization File C:/Stefano/A-work/stx3-q91/gtkto1/sopc/cpu_rf_ram.mif
+	Info: Processed Memory Initialization File C:/Stefano/A-work/stx3-q91/gtkto1/sopc/mem.hex
+Info: Quartus II MIF/HEX Update was successful. 0 errors, 11 warnings
+	Info: Peak virtual memory: 182 megabytes
+	Info: Processing ended: Sun Apr 25 01:16:51 2010
+	Info: Elapsed time: 00:00:02
+	Info: Total CPU time (on all processors): 00:00:02
+--- Messages
+
+!! NOTE: ./sopc/ pathname MUST be added to Assignments/Settings/Libraries (otherwise .hex file will not be found by update_mif function) !!
+
+--> Run Assembler to regenerate .sof file (Processing/Start/Start Assembler) 
+
+ 

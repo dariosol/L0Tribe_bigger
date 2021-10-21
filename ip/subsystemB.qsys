@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="System" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element ETH_DMA
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+   element clk_0
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+   }
+   element data_format_adapter_0
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+   element eth_fifo
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="EP4SGX230KF40C2" />
+ <parameter name="deviceFamily" value="Stratix IV" />
+ <parameter name="deviceSpeedGrade" value="2" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="hideFromIPCatalog" value="false" />
+ <parameter name="lockedInterfaceDefinition" value="" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName" value="" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="testBenchDutName" value="" />
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="false" />
+ <instanceScript></instanceScript>
+ <interface name="ETH_DMA_csr" internal="ETH_DMA.csr" type="avalon" dir="end" />
+ <interface
+   name="ETH_DMA_csr_irq"
+   internal="ETH_DMA.csr_irq"
+   type="interrupt"
+   dir="end" />
+ <interface
+   name="ETH_DMA_descriptor_slave"
+   internal="ETH_DMA.descriptor_slave"
+   type="avalon"
+   dir="end" />
+ <interface
+   name="ETH_DMA_mm_write"
+   internal="ETH_DMA.mm_write"
+   type="avalon"
+   dir="start" />
+ <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
+ <interface name="eth_fifo_conduit_end" internal="eth_fifo.conduit_end" />
+ <interface
+   name="eth_fifo_tofifo"
+   internal="eth_fifo.toFifo"
+   type="conduit"
+   dir="end" />
+ <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
+ <module name="ETH_DMA" kind="altera_msgdma" version="18.1" enabled="1">
+  <parameter name="AUTO_DESCRIPTOR_READ_MASTER_ADDRESS_MAP" value="" />
+  <parameter
+     name="AUTO_DESCRIPTOR_READ_MASTER_ADDRESS_WIDTH"
+     value="AddressWidth = -1" />
+  <parameter name="AUTO_DESCRIPTOR_WRITE_MASTER_ADDRESS_MAP" value="" />
+  <parameter
+     name="AUTO_DESCRIPTOR_WRITE_MASTER_ADDRESS_WIDTH"
+     value="AddressWidth = -1" />
+  <parameter name="AUTO_DEVICE" value="EP4SGX230KF40C2" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Stratix IV" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="2" />
+  <parameter name="AUTO_MM_READ_ADDRESS_MAP" value="" />
+  <parameter name="AUTO_MM_READ_ADDRESS_WIDTH" value="AddressWidth = -1" />
+  <parameter name="AUTO_MM_WRITE_ADDRESS_MAP" value="" />
+  <parameter name="AUTO_MM_WRITE_ADDRESS_WIDTH" value="AddressWidth = -1" />
+  <parameter name="BURST_ENABLE" value="0" />
+  <parameter name="BURST_WRAPPING_SUPPORT" value="0" />
+  <parameter name="CHANNEL_ENABLE" value="0" />
+  <parameter name="CHANNEL_WIDTH" value="8" />
+  <parameter name="DATA_FIFO_DEPTH" value="64" />
+  <parameter name="DATA_WIDTH" value="256" />
+  <parameter name="DESCRIPTOR_FIFO_DEPTH" value="128" />
+  <parameter name="ENHANCED_FEATURES" value="0" />
+  <parameter name="ERROR_ENABLE" value="0" />
+  <parameter name="ERROR_WIDTH" value="8" />
+  <parameter name="EXPOSE_ST_PORT" value="0" />
+  <parameter name="FIX_ADDRESS_WIDTH" value="32" />
+  <parameter name="MAX_BURST_COUNT" value="2" />
+  <parameter name="MAX_BYTE" value="2048" />
+  <parameter name="MAX_STRIDE" value="1" />
+  <parameter name="MODE" value="2" />
+  <parameter name="PACKET_ENABLE" value="1" />
+  <parameter name="PREFETCHER_DATA_WIDTH" value="32" />
+  <parameter name="PREFETCHER_ENABLE" value="0" />
+  <parameter name="PREFETCHER_MAX_READ_BURST_COUNT" value="2" />
+  <parameter name="PREFETCHER_READ_BURST_ENABLE" value="0" />
+  <parameter name="PROGRAMMABLE_BURST_ENABLE" value="0" />
+  <parameter name="RESPONSE_PORT" value="2" />
+  <parameter name="STRIDE_ENABLE" value="0" />
+  <parameter name="TRANSFER_TYPE" value="Aligned Accesses" />
+  <parameter name="USE_FIX_ADDRESS_WIDTH" value="0" />
+ </module>
+ <module name="clk_0" kind="clock_source" version="18.1" enabled="1">
+  <parameter name="clockFrequency" value="200000000" />
+  <parameter name="clockFrequencyKnown" value="true" />
+  <parameter name="inputClockFrequency" value="0" />
+  <parameter name="resetSynchronousEdges" value="NONE" />
+ </module>
+ <module
+   name="data_format_adapter_0"
+   kind="data_format_adapter"
+   version="18.1"
+   enabled="1">
+  <parameter name="inBitsPerSymbol" value="8" />
+  <parameter name="inChannelWidth" value="0" />
+  <parameter name="inErrorDescriptor" value="" />
+  <parameter name="inErrorWidth" value="0" />
+  <parameter name="inMaxChannel" value="0" />
+  <parameter name="inReadyLatency" value="0" />
+  <parameter name="inSymbolsPerBeat" value="8" />
+  <parameter name="inUseEmpty" value="false" />
+  <parameter name="inUseEmptyPort" value="AUTO" />
+  <parameter name="inUsePackets" value="true" />
+  <parameter name="outSymbolsPerBeat" value="32" />
+  <parameter name="outUseEmpty" value="false" />
+  <parameter name="outUseEmptyPort" value="AUTO" />
+ </module>
+ <module name="eth_fifo" kind="ethFIFO" version="1.0" enabled="1" />
+ <connection
+   kind="avalon_streaming"
+   version="18.1"
+   start="eth_fifo.avalon_streaming_source"
+   end="data_format_adapter_0.in" />
+ <connection
+   kind="avalon_streaming"
+   version="18.1"
+   start="data_format_adapter_0.out"
+   end="ETH_DMA.st_sink" />
+ <connection
+   kind="clock"
+   version="18.1"
+   start="clk_0.clk"
+   end="data_format_adapter_0.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="eth_fifo.clock" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="ETH_DMA.clock" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clk_0.clk_reset"
+   end="eth_fifo.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clk_0.clk_reset"
+   end="data_format_adapter_0.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clk_0.clk_reset"
+   end="ETH_DMA.reset_n" />
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+</system>

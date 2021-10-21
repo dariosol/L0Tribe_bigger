@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+newSoftwareExampleWizardPage.defaultLocation=/home/na62torino/Data/TestBench_LS/software/TestBench_FW
+newSoftwareExampleWizardPage.sopcinfoFile=/home/na62torino/Data/TestBench_LS/testbench_ls.sopcinfo
+newSoftwareExampleWizardPage2.newBspLocation=/home/na62torino/Data/TestBench_LS/software/TestBench_FW_bsp

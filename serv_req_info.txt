@@ -1,0 +1,24 @@
+<internal_error>
+	<executable>quartus</executable>
+	<sub_system>MEM</sub_system>
+	<error>*** Fatal Error: Out of memory in module quartus (3071 megabytes used)</error>
+	<date>Wed Jul  1 13:40:19 2020</date>
+	<version>Version 18.1.1 Build 646 04/11/2019 SJ Standard Edition</version>
+</internal_error>
+
+<internal_error>
+	<executable>quartus</executable>
+	<sub_system>MEM</sub_system>
+	<error>*** Fatal Error: Out of memory in module quartus (3859 megabytes used)</error>
+	<date>Thu Jul  2 17:29:41 2020</date>
+	<version>Version 18.1.1 Build 646 04/11/2019 SJ Standard Edition</version>
+</internal_error>
+
+<internal_error>
+	<executable>quartus</executable>
+	<sub_system>MEM</sub_system>
+	<error>*** Fatal Error: Out of memory in module quartus (3721 megabytes used)</error>
+	<date>Mon Jul 13 18:12:31 2020</date>
+	<version>Version 18.1.1 Build 646 04/11/2019 SJ Standard Edition</version>
+</internal_error>
+

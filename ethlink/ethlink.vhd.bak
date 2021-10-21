@@ -1,0 +1,539 @@
+--This module reads data from a pre-initialized memory and sends
+--primitive via eth to another DE4 board
+
+--Problem: it sends primitive to the port 0
+--No communication!!!!
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+--
+use work.globals.all;
+
+package component_ethlink is
+
+
+  constant ethlink_NODES : natural := 4;
+
+  type FSMSend_t is (S0, S1, S2, S3, S4, S5);
+  type FSMSend_vector_t is array(natural range <>) of FSMSend_t;
+
+  type vector is array(natural range <>) of std_logic;
+  type vector4 is array(natural range <>) of std_logic_vector(3 downto 0);
+  type vector8 is array(natural range <>) of std_logic_vector(7 downto 0);
+  type vector14 is array(natural range <>) of std_logic_vector(13 downto 0);
+  type vector15 is array(natural range <>) of std_logic_vector(14 downto 0);
+  type vector16 is array(natural range <>) of std_logic_vector(15 downto 0);
+  type vector24 is array(natural range <>) of std_logic_vector(23 downto 0);
+  type vector32 is array(natural range <>) of std_logic_vector(31 downto 0);
+  type vector64 is array(natural range <>) of std_logic_vector(63 downto 0);
+
+
+  type ethlink_inputs_t is record
+
+    startData  : std_logic;
+    sendflag   : std_logic_vector(0 to ethlink_NODES - 1);
+    data       : vector_64(0 to ethlink_NODES - 1);
+    clkin_50   : std_logic;
+    clkin_125  : std_logic;
+    cpu_resetn : std_logic;
+    enet_rxp   : std_logic_vector(0 to ethlink_NODES - 1);
+    mdio_sin   : std_logic_vector(0 to ethlink_NODES - 1);
+    USER_DIPSW : std_logic_vector(7 downto 0);
+
+    sw0 : std_logic;
+    sw1 : std_logic;
+    sw2 : std_logic;
+    sw3 : std_logic;
+
+  
+  end record;
+
+
+  type ethlink_outputs_t is record
+    enet_resetn : std_logic;
+    enet_txp    : std_logic_vector(0 to ethlink_NODES - 1);
+    enet_mdc    : std_logic_vector(0 to ethlink_NODES - 1);
+    mdio_sout   : std_logic_vector(0 to ethlink_NODES - 1);
+    mdio_sena   : std_logic_vector(0 to ethlink_NODES - 1);
+
+    requestdata : std_logic_vector(0 to ethlink_NODES - 1);
+  end record;
+
+
+  type ethlink_t is record
+    inputs  : ethlink_inputs_t;
+    outputs : ethlink_outputs_t;
+  end record;
+
+--
+-- ethlink vector type (constant)
+--
+  type ethlink_vector_t is array(natural range <>) of ethlink_t;
+
+  component ethlink
+    port (
+      inputs  : in  ethlink_inputs_t;
+      outputs : out ethlink_outputs_t
+      );
+  end component;
+
+  signal component_ethlink : ethlink_t;
+end component_ethlink;
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use work.userlib.all;
+use work.globals.all;
+--
+-- use work.component_[name].all;
+--
+use work.component_ethlink.all;
+use work.component_syncrst1.all;
+use work.component_mac_sgmii.all;
+
+entity ethlink is
+  port (
+    inputs  : in  ethlink_inputs_t;
+    outputs : out ethlink_outputs_t
+    );
+end ethlink;
+
+architecture rtl of ethlink is
+
+  
+  type reglist_clk50_t is record
+    wena                   : std_logic_vector(0 to ethlink_NODES-1);
+    rena                   : std_logic_vector(0 to ethlink_NODES-1);
+
+    div2                   : std_logic;
+    eol                    : std_logic;
+  end record;
+
+  constant reglist_clk50_default : reglist_clk50_t :=
+    (
+      wena                   => (others => '0'),
+      rena                   => (others => '0'),
+      div2                   => '0',
+      eol                    => '0'
+      );
+
+  type reglist_clk125_t is record
+    wena                : std_logic_vector(0 to ethlink_NODES-1);
+    rena                : std_logic_vector(0 to ethlink_NODES-1);
+    hwaddress           : std_logic_vector(7 downto 0);
+    FSMSend             : FSMSend_vector_t(0 to ethlink_NODES-1);
+    requestdata         : std_logic_vector(0 to ethlink_NODES-1);
+    data                : vector64(0 to ethlink_NODES-1);
+  end record;
+
+  constant reglist_clk125_default : reglist_clk125_t :=
+    (
+      FSMSend             => (others => S0),
+      wena                => (others => '0'),
+      rena                => (others => '0'),
+      hwaddress           => "00000000",
+      eol                 => '0',
+      requestdata         => (others => '0'),
+      data                => (others=>others=>'0')
+      );
+
+
+  type reglist_t is record
+
+    clk50  : reglist_clk50_t;
+    clk125 : reglist_clk125_t;
+  end record;
+
+
+  type resetlist_t is record
+    main   : std_logic;
+    clk50  : std_logic;
+    clk125 : std_logic;
+  end record;
+
+  type netlist_t is record
+    -- internal clocks
+    clk125      : std_logic;
+    rst         : resetlist_t;
+    SyncRST     : syncrst1_t;
+    MAC         : mac_sgmii_vector_t(0 to ethlink_NODES - 1);
+  end record;
+
+
+  subtype inputs_t is ethlink_inputs_t;
+  subtype outputs_t is ethlink_outputs_t;
+
+  type allregs_t is record
+    din  : reglist_t;
+    dout : reglist_t;
+  end record;
+
+
+  signal allregs : allregs_t;
+  signal allnets : netlist_t;
+  signal allouts : outputs_t;
+
+begin
+
+  SyncRST : syncrst1 port map
+    (
+      inputs  => allnets.SyncRST.inputs,
+      outputs => allnets.SyncRST.outputs
+      );
+
+  MAC : for index in 0 to ethlink_NODES-1 generate
+    MAC : mac_sgmii port map
+      (
+        inputs  => allnets.MAC(index).inputs,
+        outputs => allnets.MAC(index).outputs
+        );
+  end generate;
+
+
+  process (inputs.clkin_50, allnets.rst.clk50)
+  begin
+    if (allnets.rst.clk50 = '1') then
+      allregs.dout.clk50 <= reglist_clk50_default;
+    elsif rising_edge(inputs.clkin_50) then
+      allregs.dout.clk50 <= allregs.din.clk50;
+    end if;
+  end process;
+
+
+  process (allnets.clk125, allnets.rst.clk125)
+  begin
+    if (allnets.rst.clk125 = '1') then
+      allregs.dout.clk125 <= reglist_clk125_default;
+    elsif rising_edge(allnets.clk125) then
+      allregs.dout.clk125 <= allregs.din.clk125;
+    end if;
+  end process;
+
+
+
+  process (inputs, allouts, allregs, allnets)
+    procedure SubReset
+      (
+        variable i  : in    inputs_t;
+        variable ri : in    reglist_t;
+        variable ro : in    reglist_t;
+        variable o  : inout outputs_t;
+        variable r  : inout reglist_t;
+        variable n  : inout netlist_t
+        ) is
+    begin
+
+      n.clk125                := i.clkin_125;
+      n.SyncRST.inputs.clk(1) := i.clkin_50;
+      n.SyncRST.inputs.clr(1) := not(i.cpu_resetn);
+      n.rst.main              := n.SyncRST.outputs.rst(1);
+
+
+      n.SyncRST.inputs.clk(2) := n.clk125;
+      n.SyncRST.inputs.clr(2) := n.rst.main;
+      n.rst.clk125            := n.SyncRST.outputs.rst(2);
+
+
+      n.SyncRST.inputs.clk(3) := i.clkin_50;
+      n.SyncRST.inputs.clr(3) := n.rst.clk125;
+      n.rst.clk50             := n.SyncRst.outputs.rst(3);
+
+      n.SyncRst.inputs.clk(4) := '0';
+      n.SyncRst.inputs.clr(4) := '1';
+
+      n.SyncRst.inputs.clk(5) := '0';
+      n.SyncRst.inputs.clr(5) := '1';
+
+
+      n.SyncRst.inputs.clk(6) := '0';
+      n.SyncRst.inputs.clr(6) := '1';
+
+
+      n.SyncRst.inputs.clk(7) := '0';
+      n.SyncRst.inputs.clr(7) := '1';
+
+
+      n.SyncRst.inputs.clk(8) := '0';
+      n.SyncRst.inputs.clr(8) := '1';
+
+    end procedure;
+
+
+    procedure SubMain                   --Setta tutti i clock e i macaddress
+      (
+        variable i  : in    inputs_t;
+        variable ri : in    reglist_t;
+        variable ro : in    reglist_t;
+        variable o  : inout outputs_t;
+        variable r  : inout reglist_t;
+        variable n  : inout netlist_t
+        ) is
+    begin
+
+      
+      r.clk50.div2       := not(ro.clk50.div2);
+      r.clk125.hwaddress := i.USER_DIPSW(7 downto 0);
+      r.clk125.data      := i.data;
+      for index in 0 to ethlink_NODES-1 loop
+
+        o.enet_mdc(index) := '0';
+        o.mdio_sout(index) := '0';
+        o.mdio_sena(index) := '0';
+
+        n.MAC(index).inputs.ref_clk := n.clk125;  -- !! Debug !! SGMII/RGMII --> n.clk125;
+        n.MAC(index).inputs.rst     := not i.cpu_resetn;  -- async --> syncrst embedded into MAC
+
+
+        o.requestdata := ro.requestdata;
+        r.clk125.data := i.data;
+        r.clk125.sendflag    := i.sendflag;
+
+        -- MAC Avalon interface (indexed)
+        if index = 0 then
+          n.MAC(index).inputs.clk         := i.clkin_50;  -- avalon bus clock (also FF_PORT clock)
+          n.MAC(index).inputs.mmaddress   := (others => '0');
+          n.MAC(index).inputs.mmread      := '0';
+          n.MAC(index).inputs.mmwrite     := '0';
+          n.MAC(index).inputs.mmwritedata := (others => '0');
+        end if;
+        if index = 1 then
+          n.MAC(index).inputs.clk         := i.clkin_50;  -- avalon bus clock (also FF_PORT clock)
+          n.MAC(index).inputs.mmaddress   := (others => '0');
+          n.MAC(index).inputs.mmread      := '0';
+          n.MAC(index).inputs.mmwrite     := '0';
+          n.MAC(index).inputs.mmwritedata := (others => '0');
+        end if;
+        if index = 2 then
+          n.MAC(index).inputs.clk         := i.clkin_50;  -- avalon bus clock (also FF_PORT clock)
+          n.MAC(index).inputs.mmaddress   := (others => '0');
+          n.MAC(index).inputs.mmread      := '0';
+          n.MAC(index).inputs.mmwrite     := '0';
+          n.MAC(index).inputs.mmwritedata := (others => '0');
+        end if;
+        if index = 3 then
+          n.MAC(index).inputs.clk         := i.clkin_50;  -- avalon bus clock (also FF_PORT clock)
+          n.MAC(index).inputs.mmaddress   := (others => '0');
+          n.MAC(index).inputs.mmread      := '0';
+          n.MAC(index).inputs.mmwrite     := '0';
+          n.MAC(index).inputs.mmwritedata := (others => '0');
+        end if;
+
+        -- MAC hardware address (indexed)
+        n.MAC(index).inputs.nodeaddr             := ro.clk125.hwaddress;
+        n.MAC(index).inputs.nodeaddr(1 downto 0) := SLV(index, 2);  -- !! DEBUG !! constant address indexed (0..3)
+        -- MAC multicast address (not used)
+        n.MAC(index).inputs.multicastaddr        := "00000000";
+
+
+        -- enet sgmii inputs
+        n.MAC(index).inputs.rxp := i.enet_rxp(index);
+
+        -- enet sgmii outputs
+        o.enet_txp(index) := n.MAC(index).outputs.txp;
+
+        -- ethernet phy async reset
+        o.enet_resetn := i.cpu_resetn;
+      end loop;
+
+      -- MAC inputs not used (wclk,wrst applied for Framegen operations)
+      for index in 0 to ethlink_NODES-1 loop
+        for p in 1 to RX_NPORTS loop
+          n.MAC(index).inputs.rack(p) := '0';
+          n.MAC(index).inputs.rreq(p) := '0';
+          n.MAC(index).inputs.rena(p) := '0';
+          n.MAC(index).inputs.rrst(p) := '0';
+          n.MAC(index).inputs.rclk(p) := '0';
+        end loop;
+        --
+        for p in 1 to TX_NPORTS loop
+          n.MAC(index).inputs.wtxclr(p)     := '0';
+          n.MAC(index).inputs.wtxreq(p)     := '0';
+          n.MAC(index).inputs.wmulticast(p) := '0';
+          n.MAC(index).inputs.wdestaddr(p)  := "00000000";
+          n.MAC(index).inputs.wdestport(p)  := "0000";
+          n.MAC(index).inputs.wframelen(p)  := "00000000000";
+          n.MAC(index).inputs.wdata(p)      := (others => '0');
+          n.MAC(index).inputs.wreq(p)       := '0';
+          n.MAC(index).inputs.wena(p)       := '0';
+          n.MAC(index).inputs.wclk(p)       := n.clk125;
+          n.MAC(index).inputs.wrst(p)       := n.rst.clk125;
+        end loop;
+      end loop;
+
+    end procedure;
+
+
+
+
+
+
+  
+-------------SEND DATA TO ANOTHER DE4 BOARD SIMULATING TEL62---------------------------
+    procedure SubSendPrimitive0
+      (
+        variable i  : in    inputs_t;
+        variable ri : in    reglist_clk125_t;
+        variable ro : in    reglist_clk125_t;
+        variable o  : inout outputs_t;
+        variable r  : inout reglist_clk125_t;
+        variable n  : inout netlist_t
+        ) is
+    begin
+
+      -- Tx FF_PORT defaults
+      n.MAC(0).inputs.wtxclr(FF_PORT)     := '0';
+      n.MAC(0).inputs.wtxreq(FF_PORT)     := '0';
+      n.MAC(0).inputs.wmulticast(FF_PORT) := '0';
+
+      --SEND DATA TO DE4_0-----------------------------------
+      n.MAC(0).inputs.wdestport(FF_PORT) := SLV(2, 4);
+      --if index = 0 then
+      n.MAC(0).inputs.wdestaddr(FF_PORT) := SLV(4, 8);  -- data to second
+                                                        -- input of L0TP
+      --  end if;
+      --if index = 1 then
+      -- n.MAC(0).inputs.wdestaddr(FF_PORT) := SLV(11, 8);  --data to last
+            --input of L0TP
+      --end if;
+
+
+      n.MAC(0).inputs.wdata(FF_PORT) := (others => '0');
+      n.MAC(0).inputs.wreq(FF_PORT)  := '0';
+      n.MAC(0).inputs.wena(FF_PORT)  := ro.wena(0);
+      n.MAC(0).inputs.wclk(FF_PORT)  := n.clk125;
+      n.MAC(0).inputs.wrst(FF_PORT)  := n.rst.clk125;
+      -- Rx FF_PORT defaults
+      n.MAC(0).inputs.rack(FF_PORT)  := '0';
+      n.MAC(0).inputs.rreq(FF_PORT)  := '0';
+      n.MAC(0).inputs.rena(FF_PORT)  := ro.rena(0);
+      n.MAC(0).inputs.rclk(FF_PORT)  := n.clk125;
+      n.MAC(0).inputs.rrst(FF_PORT)  := n.rst.clk125;
+
+      r.wena(0) := '1';
+      r.rena(0) := '1';
+
+      case ro.FSMSend(0) is
+
+        when S0 =>
+          if i.startData = '1' then
+            r.FSMSend(0)     := S1;
+            r.counterdata(0) := (others => '0');  --parole da scrivere nel MAC
+            r.latency(0)  := SLV(UINT(ro.latency(0))-1, 16);
+            r.sent(0)        := '0';
+            r.requestdata    :='1';
+          else
+            n.MAC(0).inputs.wtxclr(FF_PORT) := '1';
+            r.FSMSend(0)                    := S0;
+            r.MTPeventNum(0)                := ("00000000000000000000000000000001");
+            r.sent(0)                       := '0';
+            r.latency(0)                    := SLV(799, 16);  --latenza. Ogni 800* 8 ns = 6400 ns spedisco una primitiva
+            r.counterdata(0)                := (others => '0');  --parole da scrivere nel MAC
+          end if;
+
+        when S1 =>
+          if i.startData = '1' then
+
+            r.sent(0)       := '0';
+            r.latency(0) := SLV(UINT(ro.latency(0))-1, 16);
+
+            if ro.senddata(0) = '1' then  --6.4 us
+              r.MTPheader(0) := '1';
+              r.FSMSend(0)   := S2;
+            else
+              r.FSMSend(0) := S1;
+            end if;
+          else
+            r.FSMSend(0) := S0;
+          end if;
+
+        when S2 =>
+          if i.startData = '1' then
+            r.latency(0) := SLV(UINT(ro.latency(0))-1, 16);
+              if n.MAC(0).outputs.wready(FF_PORT) = '1' and n.MAC(0).outputs.wfull(FF_PORT) = '0' then
+                n.MAC(0).inputs.wdata(FF_PORT)(63 downto 0)  := ro.data(0);
+                n.MAC(0).inputs.wreq(FF_PORT)                := '1';
+              else
+                null;
+              end if;
+            r.FSMSend(0) := S3;
+          else
+            r.FSMSend(0) := S0;
+          end if;
+
+        when S3 =>
+          if i.startData = '1' then     --6.4 us
+            r.latency(0) := SLV(UINT(ro.latency(0))-1, 16);
+            if UINT(ro.counterdata(0)) = UINT(ro.wordtoread(0)) then
+              r.FSMSend(0) := S5;
+            else
+              r.counterdata(0)           := SLV(UINT(ro.counterdata(0))+1, 8);
+              n.SENDFIFO(0).inputs.rdreq := '1';
+              r.FSMSend(0)               := S4;
+            end if;
+          else
+            r.FSMSend(0) := S0;
+          end if;
+
+
+        when s5 =>
+
+          if UINT(ro.latency(0)) = 0 then
+            r.latency(0)                    := SLV(799, 16);  --latenza. Ogni 800*8 ns = 6400 ns spedisco una primitiva
+            n.MAC(0).inputs.wframelen(FF_PORT) := SLV(28+8+UINT(ro.counterdata(0))*8, 11);
+            n.MAC(0).inputs.wtxreq(FF_PORT)    := '1';
+            r.MTPeventNum(0)                   := SLV(UINT(ro.MTPeventNum(0))+1, 32);
+            r.FSMSend(0)                       := S0;
+            r.sent(0)                          := '1';
+          else
+            r.latency(0) := SLV(UINT(ro.latency(0))-1, 16);
+            r.FSMSend(0)    := S5;
+          end if;
+
+      end case;
+--      end loop;
+    end procedure;
+
+
+    variable i  : inputs_t;
+    variable ri : reglist_t;
+    variable ro : reglist_t;
+    variable o  : outputs_t;
+    variable r  : reglist_t;
+    variable n  : netlist_t;
+  begin
+    -- read only variables
+    i  := inputs;
+    ri := allregs.din;
+    ro := allregs.dout;
+    -- read/write variables
+    o  := allouts;
+    r  := allregs.dout;
+    n  := allnets;
+
+
+    -- all clock domains
+    SubMain(i, ri, ro, o, r, n);
+    SubReset(i, ri, ro, o, r, n);
+
+    -- clock domain: clk50
+    --SubCounter(i, ri.clk50, ro.clk50, o, r.clk50, n);
+    SubReadRam0(i, ri.clk125, ro.clk125, o, r.clk125, n);
+    SubReadRam1(i, ri.clk125, ro.clk125, o, r.clk125, n);
+    SubSendPrimitive0(i, ri.clk125, ro.clk125, o, r.clk125, n);
+    SubSendPrimitive1(i, ri.clk125, ro.clk125, o, r.clk125, n);
+
+    --   SubReceive(i, ri.clk50, ro.clk50, o, r.clk50, n);
+    -- SubSendTrigger(i, ri.clk50, ro.clk50, o, r.clk50, n);
+
+    -- allouts/regs/nets updates
+    allouts     <= o;
+    allregs.din <= r;
+    allnets     <= n;
+
+  end process;
+
+  outputs <= allouts;
+
+end rtl;

@@ -1,0 +1,1316 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/na62torino/Data/ControlFPGA
+Ealtpll_refclk
+Z1 w1439473935
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8/home/na62torino/Data/ControlFPGA/altpll_refclk.vhd
+Z5 F/home/na62torino/Data/ControlFPGA/altpll_refclk.vhd
+l0
+L42
+VSbS<1PD7[606ek8DA;1L`3
+!s100 b1ei:0[=XhY`<8g=okHI[3
+Z6 OV;C;10.5b;63
+32
+Z7 !s110 1557915639
+!i10b 1
+Z8 !s108 1557915639.000000
+Z9 !s90 -reportprogress|300|-work|work|/home/na62torino/Data/ControlFPGA/altpll_refclk.vhd|
+Z10 !s107 /home/na62torino/Data/ControlFPGA/altpll_refclk.vhd|
+!i113 1
+Z11 o-work work
+Z12 tExplicit 1 NoCoverage 1 CoverShortCircuit 0 CvgOpt 0
+Asyn
+R2
+R3
+DEx4 work 13 altpll_refclk 0 22 SbS<1PD7[606ek8DA;1L`3
+l133
+L53
+V<La:X;6FT`DV7Ve4:mH`C0
+!s100 4?8fjhmNU>T;M4i`6<bZS2
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ealtpll_refclk2
+Z13 w1449828720
+R2
+R3
+R0
+Z14 8/home/na62torino/Data/ControlFPGA/altpll_refclk2.vhd
+Z15 F/home/na62torino/Data/ControlFPGA/altpll_refclk2.vhd
+l0
+L42
+VCd^BUGQf=77G_GODMgTAo0
+!s100 H38FAcT7DPTNR@R>I``QB3
+R6
+32
+Z16 !s110 1557912589
+!i10b 1
+Z17 !s108 1557912589.000000
+Z18 !s90 -reportprogress|300|-work|work|/home/na62torino/Data/ControlFPGA/altpll_refclk2.vhd|
+Z19 !s107 /home/na62torino/Data/ControlFPGA/altpll_refclk2.vhd|
+!i113 1
+R11
+R12
+Asyn
+R2
+R3
+DEx4 work 14 altpll_refclk2 0 22 Cd^BUGQf=77G_GODMgTAo0
+l133
+L53
+VLo^Wb=GdXd:Jgd`SU`_RD2
+!s100 [M_b>DfmB3LdfK`LO@]]f2
+R6
+32
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R11
+R12
+Ealtram2trigger
+Z20 w1439473936
+R2
+R3
+R0
+Z21 8/home/na62torino/Data/ControlFPGA/mac/altram2trigger.vhd
+Z22 F/home/na62torino/Data/ControlFPGA/mac/altram2trigger.vhd
+l0
+L42
+VE4j@YdJbDLLIfHA_:3AN42
+!s100 lHfgH;hC8E]9HKi6O_5;J1
+R6
+32
+Z23 !s110 1557912878
+!i10b 1
+Z24 !s108 1557912878.000000
+Z25 !s90 -reportprogress|300|-work|work|/home/na62torino/Data/ControlFPGA/mac/altram2trigger.vhd|
+Z26 !s107 /home/na62torino/Data/ControlFPGA/mac/altram2trigger.vhd|
+!i113 1
+R11
+R12
+Asyn
+R2
+R3
+DEx4 work 14 altram2trigger 0 22 E4j@YdJbDLLIfHA_:3AN42
+l98
+L56
+VCo2HQJT2VMa08K:0?O5SK3
+!s100 3DSWNScGGkAP43eAc:VUO0
+R6
+32
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R11
+R12
+Ealtramdatachod
+Z27 w1558094499
+Z28 DPx9 altera_mf 20 altera_mf_components 0 22 m2K6F5NmQKkFhQa^^]15g3
+R2
+R3
+R0
+Z29 8/home/na62torino/Data/ControlFPGA/mac/altramdataCHOD.vhd
+Z30 F/home/na62torino/Data/ControlFPGA/mac/altramdataCHOD.vhd
+l0
+L43
+V2hA6aLJENC4ll@iDS8F@V3
+!s100 ;K7YkQ5ZK^@AKS7VdZNR_1
+R6
+32
+Z31 !s110 1558094865
+!i10b 1
+Z32 !s108 1558094865.000000
+Z33 !s90 -reportprogress|300|-work|work|/home/na62torino/Data/ControlFPGA/mac/altramdataCHOD.vhd|
+Z34 !s107 /home/na62torino/Data/ControlFPGA/mac/altramdataCHOD.vhd|
+!i113 1
+R11
+R12
+Asyn
+R28
+R2
+R3
+DEx4 work 14 altramdatachod 0 22 2hA6aLJENC4ll@iDS8F@V3
+l61
+L57
+ViiTJ1761;3GHXh[i_DKLP1
+!s100 T>X8An3@E5>5S<=Z69;zN0
+R6
+32
+R31
+!i10b 1
+R32
+R33
+R34
+!i113 1
+R11
+R12
+Ealtramdatalav
+R20
+R2
+R3
+R0
+Z35 8/home/na62torino/Data/ControlFPGA/mac/altramdataLAV.vhd
+Z36 F/home/na62torino/Data/ControlFPGA/mac/altramdataLAV.vhd
+l0
+L42
+VIWcRkcfH`==o4BCN7^Xaa2
+!s100 3V[]knZ2^Wib2Aol9ebPU3
+R6
+32
+Z37 !s110 1557912541
+!i10b 1
+Z38 !s108 1557912541.000000
+Z39 !s90 -reportprogress|300|-work|work|/home/na62torino/Data/ControlFPGA/mac/altramdataLAV.vhd|
+Z40 !s107 /home/na62torino/Data/ControlFPGA/mac/altramdataLAV.vhd|
+!i113 1
+R11
+R12
+Asyn
+R2
+R3
+DEx4 work 13 altramdatalav 0 22 IWcRkcfH`==o4BCN7^Xaa2
+l97
+L56
+Vhmh_>k<]<08GVB?NT9X@52
+!s100 d>EQ;Pddg64Rf21e]MIRo1
+R6
+32
+R37
+!i10b 1
+R38
+R39
+R40
+!i113 1
+R11
+R12
+Ealtramdatamuv
+Z41 w1454066351
+R2
+R3
+R0
+Z42 8/home/na62torino/Data/ControlFPGA/mac/altramdataMUV.vhd
+Z43 F/home/na62torino/Data/ControlFPGA/mac/altramdataMUV.vhd
+l0
+L42
+VAVPXg>iFJZ]F_UW4J0M>n0
+!s100 G8__oONhAX@a:cldbDEcM1
+R6
+32
+Z44 !s110 1557912542
+!i10b 1
+Z45 !s108 1557912542.000000
+Z46 !s90 -reportprogress|300|-work|work|/home/na62torino/Data/ControlFPGA/mac/altramdataMUV.vhd|
+Z47 !s107 /home/na62torino/Data/ControlFPGA/mac/altramdataMUV.vhd|
+!i113 1
+R11
+R12
+Asyn
+R2
+R3
+DEx4 work 13 altramdatamuv 0 22 AVPXg>iFJZ]F_UW4J0M>n0
+l98
+L56
+V3<5XAK]gFlU=zTjUlO9NN2
+!s100 coRY]Rd<GYbjl6jJ=zQGh1
+R6
+32
+R44
+!i10b 1
+R45
+R46
+R47
+!i113 1
+R11
+R12
+Ealtramdatarich
+R20
+R2
+R3
+R0
+Z48 8/home/na62torino/Data/ControlFPGA/mac/altramdataRICH.vhd
+Z49 F/home/na62torino/Data/ControlFPGA/mac/altramdataRICH.vhd
+l0
+L42
+VNbkbYAINAOz0_om2Zg^AM2
+!s100 R65_M;6a>RNkTXhBHZ8GG0
+R6
+32
+R44
+!i10b 1
+R45
+Z50 !s90 -reportprogress|300|-work|work|/home/na62torino/Data/ControlFPGA/mac/altramdataRICH.vhd|
+Z51 !s107 /home/na62torino/Data/ControlFPGA/mac/altramdataRICH.vhd|
+!i113 1
+R11
+R12
+Asyn
+R2
+R3
+DEx4 work 14 altramdatarich 0 22 NbkbYAINAOz0_om2Zg^AM2
+l97
+L56
+VWiTY1^;iMQ4TdeV>AMze42
+!s100 NMiNIZ5KI=AAXf`^G6I?T0
+R6
+32
+R44
+!i10b 1
+R45
+R50
+R51
+!i113 1
+R11
+R12
+Ealtsendfifo
+Z52 w1449760522
+R2
+R3
+R0
+Z53 8/home/na62torino/Data/ControlFPGA/mac/altsendfifo.vhd
+Z54 F/home/na62torino/Data/ControlFPGA/mac/altsendfifo.vhd
+l0
+L42
+V7o?4;SjheeUE@LanVk9FY1
+!s100 0T<8:;;16eLHR6zcgkZ1j1
+R6
+32
+Z55 !s110 1557912696
+!i10b 1
+Z56 !s108 1557912696.000000
+Z57 !s90 -reportprogress|300|-work|work|/home/na62torino/Data/ControlFPGA/mac/altsendfifo.vhd|
+Z58 !s107 /home/na62torino/Data/ControlFPGA/mac/altsendfifo.vhd|
+!i113 1
+R11
+R12
+Asyn
+R2
+R3
+DEx4 work 11 altsendfifo 0 22 7o?4;SjheeUE@LanVk9FY1
+l107
+L62
+V7MP93WG<3z6d=D@VQ0]dH3
+!s100 16J>^Pmo]gn?cYjQkH8453
+R6
+32
+R55
+!i10b 1
+R56
+R57
+R58
+!i113 1
+R11
+R12
+Ealttriggerfifo
+R20
+R2
+R3
+R0
+Z59 8/home/na62torino/Data/ControlFPGA/mac/alttriggerfifo.vhd
+Z60 F/home/na62torino/Data/ControlFPGA/mac/alttriggerfifo.vhd
+l0
+L42
+VSbQlT>z4dKQ7I5olHRWj61
+!s100 0:4`e>1XRDJQBlnCd@P5X1
+R6
+32
+Z61 !s110 1557912693
+!i10b 1
+Z62 !s108 1557912693.000000
+Z63 !s90 -reportprogress|300|-work|work|/home/na62torino/Data/ControlFPGA/mac/alttriggerfifo.vhd|
+Z64 !s107 /home/na62torino/Data/ControlFPGA/mac/alttriggerfifo.vhd|
+!i113 1
+R11
+R12
+Asyn
+R2
+R3
+DEx4 work 14 alttriggerfifo 0 22 SbQlT>z4dKQ7I5olHRWj61
+l107
+L62
+V7H>BQB99zfT1`OWIez9oe0
+!s100 Hbjd72?kY55XnKBCeSlI:0
+R6
+32
+R61
+!i10b 1
+R62
+R63
+R64
+!i113 1
+R11
+R12
+Pcomponent_ethlink
+Z65 DPx4 work 7 userlib 0 22 4k4h;K8D]g<=NKK3G_cIN0
+Z66 DPx4 work 7 globals 0 22 FPfNfFNn_hWPcPBI8Abj71
+Z67 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R2
+R3
+Z68 w1558430037
+R0
+Z69 8/home/na62torino/Data/ControlFPGA/readRAMSimulation.vhd
+Z70 F/home/na62torino/Data/ControlFPGA/readRAMSimulation.vhd
+l0
+L13
+VUoBZ^IE_FklGMmS[WIO>C2
+!s100 2RLM<52N9kmk4BD6aCBU01
+R6
+32
+Z71 !s110 1559292144
+!i10b 1
+Z72 !s108 1559292143.000000
+Z73 !s90 -reportprogress|300|-work|work|/home/na62torino/Data/ControlFPGA/readRAMSimulation.vhd|
+Z74 !s107 /home/na62torino/Data/ControlFPGA/readRAMSimulation.vhd|
+!i113 1
+R11
+R12
+Pcomponent_pll_refclk
+R67
+R2
+R3
+Z75 w1439473937
+R0
+Z76 8/home/na62torino/Data/ControlFPGA/pll_refclk.vhd
+Z77 F/home/na62torino/Data/ControlFPGA/pll_refclk.vhd
+l0
+L37
+VFZF_167HJ:Hn1T]zSVhZo1
+!s100 DHzVMBC2QO6FUP1`_:Ve?2
+R6
+32
+Z78 !s110 1557915641
+!i10b 1
+Z79 !s108 1557915641.000000
+Z80 !s90 -reportprogress|300|-work|work|/home/na62torino/Data/ControlFPGA/pll_refclk.vhd|
+Z81 !s107 /home/na62torino/Data/ControlFPGA/pll_refclk.vhd|
+!i113 1
+R11
+R12
+Pcomponent_pll_refclk2
+R67
+R2
+R3
+Z82 w1449829055
+R0
+Z83 8/home/na62torino/Data/ControlFPGA/pll_refclk2.vhd
+Z84 F/home/na62torino/Data/ControlFPGA/pll_refclk2.vhd
+l0
+L37
+VjbG[^1OE`D[c^YAkI;cXC2
+!s100 4aBcXn9deo0a[40ZQiG_13
+R6
+32
+Z85 !s110 1557912865
+!i10b 1
+Z86 !s108 1557912865.000000
+Z87 !s90 -reportprogress|300|-work|work|/home/na62torino/Data/ControlFPGA/pll_refclk2.vhd|
+Z88 !s107 /home/na62torino/Data/ControlFPGA/pll_refclk2.vhd|
+!i113 1
+R11
+R12
+Pcomponent_ram2trigger
+R67
+R2
+R3
+R20
+R0
+Z89 8/home/na62torino/Data/ControlFPGA/mac/ram2trigger.vhd
+Z90 F/home/na62torino/Data/ControlFPGA/mac/ram2trigger.vhd
+l0
+L18
+V89XTi><4eKGM6M[>eJ3[D2
+!s100 i@bjhCO0aRQIH`KNf<N0f3
+R6
+32
+Z91 !s110 1557912891
+!i10b 1
+Z92 !s108 1557912891.000000
+Z93 !s90 -reportprogress|300|-work|work|/home/na62torino/Data/ControlFPGA/mac/ram2trigger.vhd|
+Z94 !s107 /home/na62torino/Data/ControlFPGA/mac/ram2trigger.vhd|
+!i113 1
+R11
+R12
+Pcomponent_ramdatachod
+R67
+R2
+R3
+Z95 w1454065660
+R0
+Z96 8/home/na62torino/Data/ControlFPGA/mac/ramdataCHOD.vhd
+Z97 F/home/na62torino/Data/ControlFPGA/mac/ramdataCHOD.vhd
+l0
+L18
+VlNkf2IgDfoT<CZUZTJ_N83
+!s100 O?n7jFi[oI74`1Gg<A;N>3
+R6
+32
+Z98 !s110 1558094875
+!i10b 1
+Z99 !s108 1558094875.000000
+Z100 !s90 -reportprogress|300|-work|work|/home/na62torino/Data/ControlFPGA/mac/ramdataCHOD.vhd|
+Z101 !s107 /home/na62torino/Data/ControlFPGA/mac/ramdataCHOD.vhd|
+!i113 1
+R11
+R12
+Pcomponent_ramdatalav
+R67
+R2
+R3
+Z102 w1454065641
+R0
+Z103 8/home/na62torino/Data/ControlFPGA/mac/ramdataLAV.vhd
+Z104 F/home/na62torino/Data/ControlFPGA/mac/ramdataLAV.vhd
+l0
+L18
+VjdaG^Q[BnMzM??iQJD<M10
+!s100 f]MSDI5k1ch]^>ciPX0LQ1
+R6
+32
+Z105 !s110 1557912569
+!i10b 1
+Z106 !s108 1557912569.000000
+Z107 !s90 -reportprogress|300|-work|work|/home/na62torino/Data/ControlFPGA/mac/ramdataLAV.vhd|
+Z108 !s107 /home/na62torino/Data/ControlFPGA/mac/ramdataLAV.vhd|
+!i113 1
+R11
+R12
+Pcomponent_ramdatamuv
+R67
+R2
+R3
+Z109 w1454065623
+R0
+Z110 8/home/na62torino/Data/ControlFPGA/mac/ramdataMUV.vhd
+Z111 F/home/na62torino/Data/ControlFPGA/mac/ramdataMUV.vhd
+l0
+L18
+Vhf8PZj<=O>@kN0HYW>_GS1
+!s100 E1b3iBU1iYjIZM[VQ68iV1
+R6
+32
+R105
+!i10b 1
+R106
+Z112 !s90 -reportprogress|300|-work|work|/home/na62torino/Data/ControlFPGA/mac/ramdataMUV.vhd|
+Z113 !s107 /home/na62torino/Data/ControlFPGA/mac/ramdataMUV.vhd|
+!i113 1
+R11
+R12
+Pcomponent_ramdatarich
+R67
+R2
+R3
+Z114 w1454065603
+R0
+Z115 8/home/na62torino/Data/ControlFPGA/mac/ramdataRICH.vhd
+Z116 F/home/na62torino/Data/ControlFPGA/mac/ramdataRICH.vhd
+l0
+L18
+VPa6WT1Qog3WLB1X:Ae7ko1
+!s100 nH]eLS7N0V4R`c8Re`U7=1
+R6
+32
+Z117 !s110 1557912570
+!i10b 1
+Z118 !s108 1557912570.000000
+Z119 !s90 -reportprogress|300|-work|work|/home/na62torino/Data/ControlFPGA/mac/ramdataRICH.vhd|
+Z120 !s107 /home/na62torino/Data/ControlFPGA/mac/ramdataRICH.vhd|
+!i113 1
+R11
+R12
+Pcomponent_sendfifo
+R67
+R2
+R3
+Z121 w1449760543
+R0
+Z122 8/home/na62torino/Data/ControlFPGA/mac/sendfifo.vhd
+Z123 F/home/na62torino/Data/ControlFPGA/mac/sendfifo.vhd
+l0
+L37
+VER=d@TN9gQ]ezh424QmcN0
+!s100 L_lcg@ml_ehVhM_<DK=?a3
+R6
+32
+Z124 !s110 1557912707
+!i10b 1
+Z125 !s108 1557912707.000000
+Z126 !s90 -reportprogress|300|-work|work|/home/na62torino/Data/ControlFPGA/mac/sendfifo.vhd|
+Z127 !s107 /home/na62torino/Data/ControlFPGA/mac/sendfifo.vhd|
+!i113 1
+R11
+R12
+Pcomponent_syncrst1
+R67
+R2
+R3
+R75
+R0
+Z128 8/home/na62torino/Data/ControlFPGA/mac/syncrst1.vhd
+Z129 F/home/na62torino/Data/ControlFPGA/mac/syncrst1.vhd
+l0
+L38
+V:oi1LC`i_LJIA^V2TeYj;1
+!s100 6<NgfWzOZVRY^UVLcJZ8o2
+R6
+32
+Z130 !s110 1557912639
+!i10b 1
+Z131 !s108 1557912639.000000
+Z132 !s90 -reportprogress|300|-work|work|/home/na62torino/Data/ControlFPGA/mac/syncrst1.vhd|
+Z133 !s107 /home/na62torino/Data/ControlFPGA/mac/syncrst1.vhd|
+!i113 1
+R11
+R12
+Pcomponent_triggerfifo
+R67
+R2
+R3
+R75
+R0
+Z134 8/home/na62torino/Data/ControlFPGA/mac/triggerfifo.vhd
+Z135 F/home/na62torino/Data/ControlFPGA/mac/triggerfifo.vhd
+l0
+L37
+V8<:`EZ^<57eJ5eHU@WZ203
+!s100 [A2e=VGjlnlUjC8jS<h@_2
+R6
+32
+Z136 !s110 1557912703
+!i10b 1
+Z137 !s108 1557912703.000000
+Z138 !s90 -reportprogress|300|-work|work|/home/na62torino/Data/ControlFPGA/mac/triggerfifo.vhd|
+Z139 !s107 /home/na62torino/Data/ControlFPGA/mac/triggerfifo.vhd|
+!i113 1
+R11
+R12
+Econtroller
+Z140 w1557920820
+R66
+Z141 DPx4 work 17 component_ethlink 0 22 UoBZ^IE_FklGMmS[WIO>C2
+R67
+R65
+Z142 DPx4 ieee 11 numeric_bit 0 22 d<O?S;AIQfOzoHU3FDK]23
+R2
+R3
+R0
+Z143 8/home/na62torino/Data/ControlFPGA/ControllerSimulation.vhd
+Z144 F/home/na62torino/Data/ControlFPGA/ControllerSimulation.vhd
+l0
+L8
+Vd__FG1hZ_N87>YBz_O=eY2
+!s100 gRf9OQSmKj=;6@e4gl0kX0
+R6
+32
+Z145 !s110 1559292147
+!i10b 1
+Z146 !s108 1559292147.000000
+Z147 !s90 -reportprogress|300|-work|work|/home/na62torino/Data/ControlFPGA/ControllerSimulation.vhd|
+Z148 !s107 /home/na62torino/Data/ControlFPGA/ControllerSimulation.vhd|
+!i113 1
+R11
+R12
+Artl
+R66
+R141
+R67
+R65
+R142
+R2
+R3
+Z149 DEx4 work 10 controller 0 22 d__FG1hZ_N87>YBz_O=eY2
+l116
+L12
+Z150 Vc?oZH[WJl5JQidMnh_=J20
+Z151 !s100 n^kDA=1m4ldj[h>R<gCc?2
+R6
+32
+R145
+!i10b 1
+R146
+R147
+R148
+!i113 1
+R11
+R12
+Eethlink
+R68
+Z152 DPx4 work 21 component_triggerfifo 0 22 8<:`EZ^<57eJ5eHU@WZ203
+Z153 DPx4 work 18 component_sendfifo 0 22 ER=d@TN9gQ]ezh424QmcN0
+Z154 DPx4 work 20 component_ramdatalav 0 22 jdaG^Q[BnMzM??iQJD<M10
+Z155 DPx4 work 20 component_ramdatamuv 0 22 hf8PZj<=O>@kN0HYW>_GS1
+Z156 DPx4 work 21 component_ramdatachod 0 22 lNkf2IgDfoT<CZUZTJ_N83
+Z157 DPx4 work 21 component_ram2trigger 0 22 89XTi><4eKGM6M[>eJ3[D2
+Z158 DPx4 work 21 component_pll_refclk2 0 22 jbG[^1OE`D[c^YAkI;cXC2
+Z159 DPx4 work 18 component_syncrst1 0 22 :oi1LC`i_LJIA^V2TeYj;1
+R141
+R66
+R65
+R67
+R2
+R3
+R0
+R69
+R70
+l0
+L83
+V[YF4JENLYld3d@h0?z9dV1
+!s100 HL`SIFDNdMb8^Cde[73KA2
+R6
+32
+R71
+!i10b 1
+R72
+R73
+R74
+!i113 1
+R11
+R12
+Artl
+R152
+R153
+R154
+R155
+R156
+R157
+R158
+R159
+R141
+R66
+R65
+R67
+R2
+R3
+DEx4 work 7 ethlink 0 22 [YF4JENLYld3d@h0?z9dV1
+l243
+L90
+V`4i:b91]8XDNB^JH5]^Bi3
+!s100 OMliF;k@RKQEz?dEJFDoA0
+R6
+32
+!s110 1558099868
+!i10b 1
+!s108 1558099868.000000
+R73
+R74
+!i113 1
+R11
+R12
+Pglobals
+R65
+R67
+R2
+R3
+R20
+R0
+8/home/na62torino/Data/ControlFPGA/mac/globals.vhd
+F/home/na62torino/Data/ControlFPGA/mac/globals.vhd
+l0
+L25
+VFPfNfFNn_hWPcPBI8Abj71
+!s100 m6mOYY[]T@^_^^NY4:d4m0
+R6
+32
+!s110 1557912729
+!i10b 1
+!s108 1557912729.000000
+!s90 -reportprogress|300|-work|work|/home/na62torino/Data/ControlFPGA/mac/globals.vhd|
+!s107 /home/na62torino/Data/ControlFPGA/mac/globals.vhd|
+!i113 1
+R11
+R12
+Epll
+R75
+R2
+R3
+R0
+Z160 8/home/na62torino/Data/ControlFPGA/pll.vhd
+Z161 F/home/na62torino/Data/ControlFPGA/pll.vhd
+l0
+L42
+VU:Z3S=Vl<m^U2MkhSZKZ92
+!s100 HOS`0C_gFPbXR7c@5DA6l2
+R6
+32
+Z162 !s110 1557915658
+!i10b 1
+Z163 !s108 1557915658.000000
+Z164 !s90 -reportprogress|300|-work|work|/home/na62torino/Data/ControlFPGA/pll.vhd|
+Z165 !s107 /home/na62torino/Data/ControlFPGA/pll.vhd|
+!i113 1
+R11
+R12
+Asyn
+R2
+R3
+DEx4 work 3 pll 0 22 U:Z3S=Vl<m^U2MkhSZKZ92
+l133
+L53
+VzK94jnOPd<GekFeDUK0SP2
+!s100 ]`3c;]hQlZMFUlGEC^Q3h3
+R6
+32
+R162
+!i10b 1
+R163
+R164
+R165
+!i113 1
+R11
+R12
+Epll_refclk
+R75
+Z166 DPx4 work 20 component_pll_refclk 0 22 FZF_167HJ:Hn1T]zSVhZo1
+R65
+R67
+R2
+R3
+R0
+R76
+R77
+l0
+L108
+V19SQTV[e@O7kS[5ODP[FA2
+!s100 3k744LP<`Lh58QaV[TD820
+R6
+32
+R78
+!i10b 1
+R79
+R80
+R81
+!i113 1
+R11
+R12
+Artl
+R166
+R65
+R67
+R2
+R3
+DEx4 work 10 pll_refclk 0 22 19SQTV[e@O7kS[5ODP[FA2
+l139
+L124
+V^i3G4djCL2>D9MaOfzf[^3
+!s100 NH[5?lzDi:Rj1I3h>TiEi0
+R6
+32
+R78
+!i10b 1
+R79
+R80
+R81
+!i113 1
+R11
+R12
+Epll_refclk2
+R82
+R158
+R65
+R67
+R2
+R3
+R0
+R83
+R84
+l0
+L107
+VSLgRf1KT:DHc>EzFad3o30
+!s100 3[fQX?h^eOiDKDF]:UiDG2
+R6
+32
+R85
+!i10b 1
+R86
+R87
+R88
+!i113 1
+R11
+R12
+Artl
+R158
+R65
+R67
+R2
+R3
+DEx4 work 11 pll_refclk2 0 22 SLgRf1KT:DHc>EzFad3o30
+l138
+L123
+VRLSbFgmAHo^B]Y946NLT92
+!s100 U2TXQ<Ul<W:SnRdSAfm^:3
+R6
+32
+R85
+!i10b 1
+R86
+R87
+R88
+!i113 1
+R11
+R12
+Eram2trigger
+R20
+R157
+R65
+R67
+R2
+R3
+R0
+R89
+R90
+l0
+L101
+VShHEL<=:^E]O`7eeaT6mL3
+!s100 4RD@ad^jJRGlmAgl2[GdN2
+R6
+32
+R91
+!i10b 1
+R92
+R93
+R94
+!i113 1
+R11
+R12
+Artl
+R157
+R65
+R67
+R2
+R3
+DEx4 work 11 ram2trigger 0 22 ShHEL<=:^E]O`7eeaT6mL3
+l135
+L117
+Va]aEOfMh1VJcBI@e]aiz?1
+!s100 k=]ER=F8n8@>_aV0Yid6Y0
+R6
+32
+R91
+!i10b 1
+R92
+R93
+R94
+!i113 1
+R11
+R12
+Eramdatachod
+R95
+R156
+R65
+R67
+R2
+R3
+R0
+R96
+R97
+l0
+L101
+VUA6VJ<70iakmR3<8n_oY03
+!s100 8@JnA83i:KH]PHb6hMfY63
+R6
+32
+R98
+!i10b 1
+R99
+R100
+R101
+!i113 1
+R11
+R12
+Artl
+R156
+R65
+R67
+R2
+R3
+DEx4 work 11 ramdatachod 0 22 UA6VJ<70iakmR3<8n_oY03
+l135
+L117
+Vmod;a9AUUmkHH=FeVZWfA0
+!s100 =JA?DhX1?k616zF[5bD6k3
+R6
+32
+R98
+!i10b 1
+R99
+R100
+R101
+!i113 1
+R11
+R12
+Eramdatalav
+R102
+R154
+R65
+R67
+R2
+R3
+R0
+R103
+R104
+l0
+L101
+VYQeYlH`>il@oibLCb4i^G3
+!s100 ^ziXf@]No:z;o?4CB1Tj]2
+R6
+32
+R105
+!i10b 1
+R106
+R107
+R108
+!i113 1
+R11
+R12
+Artl
+R154
+R65
+R67
+R2
+R3
+DEx4 work 10 ramdatalav 0 22 YQeYlH`>il@oibLCb4i^G3
+l135
+L117
+V9cL`oofJG50^OB94V_S191
+!s100 JBPDKBc_W6BY8l9;@lOOY1
+R6
+32
+R105
+!i10b 1
+R106
+R107
+R108
+!i113 1
+R11
+R12
+Eramdatamuv
+R109
+R155
+R65
+R67
+R2
+R3
+R0
+R110
+R111
+l0
+L101
+VdnP1DDoVolBh`_:aXz8m21
+!s100 =jM`E=8lg13SklMD7lTQd0
+R6
+32
+R105
+!i10b 1
+R106
+R112
+R113
+!i113 1
+R11
+R12
+Artl
+R155
+R65
+R67
+R2
+R3
+DEx4 work 10 ramdatamuv 0 22 dnP1DDoVolBh`_:aXz8m21
+l135
+L117
+V=d:=C]C@U_4O7UlD<4>XN3
+!s100 DdJNV?cmXoi6jACZ=RAOo2
+R6
+32
+R105
+!i10b 1
+R106
+R112
+R113
+!i113 1
+R11
+R12
+Eramdatarich
+R114
+Z167 DPx4 work 21 component_ramdatarich 0 22 Pa6WT1Qog3WLB1X:Ae7ko1
+R65
+R67
+R2
+R3
+R0
+R115
+R116
+l0
+L101
+Vk0@EbZlMZ7Bl0l3fi:[C=2
+!s100 fnEQIBN<=C1injYkI<ERh2
+R6
+32
+R117
+!i10b 1
+R118
+R119
+R120
+!i113 1
+R11
+R12
+Artl
+R167
+R65
+R67
+R2
+R3
+DEx4 work 11 ramdatarich 0 22 k0@EbZlMZ7Bl0l3fi:[C=2
+l135
+L117
+V9@FzFnnALYR8kzTND095K0
+!s100 DRHm7Mz<:Y5N_BeH>3E?^1
+R6
+32
+R117
+!i10b 1
+R118
+R119
+R120
+!i113 1
+R11
+R12
+Erandom
+Z168 w1448543389
+R67
+R65
+R2
+R3
+R0
+Z169 8/home/na62torino/Data/ControlFPGA/random.vhd
+Z170 F/home/na62torino/Data/ControlFPGA/random.vhd
+l0
+L5
+V1mC:7F>VZ;TUN@d4aQRD81
+!s100 X8?FNoUef^Q3I7_Rghlkd2
+R6
+32
+Z171 !s110 1557915629
+!i10b 1
+Z172 !s108 1557915629.000000
+Z173 !s90 -reportprogress|300|-work|work|/home/na62torino/Data/ControlFPGA/random.vhd|
+Z174 !s107 /home/na62torino/Data/ControlFPGA/random.vhd|
+!i113 1
+R11
+R12
+Artl
+R67
+R65
+R2
+R3
+DEx4 work 6 random 0 22 1mC:7F>VZ;TUN@d4aQRD81
+l26
+L18
+VMQBf0EJ06<`gbMfLb_7TM2
+!s100 7??Y=m89V]jQzT>0F4Z4a2
+R6
+32
+R171
+!i10b 1
+R172
+R173
+R174
+!i113 1
+R11
+R12
+Esendfifo
+R121
+R153
+R65
+R67
+R2
+R3
+R0
+R122
+R123
+l0
+L127
+VhV=a1QEiLe_CgXgDa0FE20
+!s100 me1D2UZc3XlO<1T@UUegS1
+R6
+32
+R124
+!i10b 1
+R125
+R126
+R127
+!i113 1
+R11
+R12
+Artl
+R153
+R65
+R67
+R2
+R3
+DEx4 work 8 sendfifo 0 22 hV=a1QEiLe_CgXgDa0FE20
+l167
+L143
+V2kmk?AmP2zBH<SgA6^]AI1
+!s100 z7;YQM9aa3HiE4@nPIEzi3
+R6
+32
+R124
+!i10b 1
+R125
+R126
+R127
+!i113 1
+R11
+R12
+Esyncrst1
+R75
+R159
+R65
+R67
+R2
+R3
+R0
+R128
+R129
+l0
+L112
+V]ZYU74:0CVNP<QZjUg[de2
+!s100 k5=jTWzV;Sme>S2e3IcEF1
+R6
+32
+R130
+!i10b 1
+R131
+R132
+R133
+!i113 1
+R11
+R12
+Artl
+R159
+R65
+R67
+R2
+R3
+DEx4 work 8 syncrst1 0 22 ]ZYU74:0CVNP<QZjUg[de2
+l240
+L130
+V=kGMN319CQ;fKhHAILGkZ0
+!s100 nLGlg;lAXT>DK@3I9n:<50
+R6
+32
+R130
+!i10b 1
+R131
+R132
+R133
+!i113 1
+R11
+R12
+Etriggerfifo
+R75
+R152
+R65
+R67
+R2
+R3
+R0
+R134
+R135
+l0
+L127
+Va8b^]=BOTKMXST8zSPdOf3
+!s100 TgW4@;@K:o_9iY5jQ0PFG3
+R6
+32
+R136
+!i10b 1
+R137
+R138
+R139
+!i113 1
+R11
+R12
+Artl
+R152
+R65
+R67
+R2
+R3
+DEx4 work 11 triggerfifo 0 22 a8b^]=BOTKMXST8zSPdOf3
+l167
+L143
+VDTWWFe@BfV]Cj3M]:6=M33
+!s100 753WfHM]WdFGg`RUbO7hN1
+R6
+32
+R136
+!i10b 1
+R137
+R138
+R139
+!i113 1
+R11
+R12
+Puserlib
+R67
+R2
+R3
+Z175 w1547113477
+R0
+Z176 8/home/na62torino/Data/na62l0tpfw/mac/userlib.vhd
+Z177 F/home/na62torino/Data/na62l0tpfw/mac/userlib.vhd
+l0
+L11
+V4k4h;K8D]g<=NKK3G_cIN0
+!s100 ^6j:;aI3eL3;<I_hRHEz@1
+R6
+32
+b1
+Z178 !s110 1557913036
+!i10b 1
+Z179 !s108 1557913036.000000
+Z180 !s90 -reportprogress|300|-work|work|/home/na62torino/Data/na62l0tpfw/mac/userlib.vhd|
+Z181 !s107 /home/na62torino/Data/na62l0tpfw/mac/userlib.vhd|
+!i113 1
+R11
+R12
+Bbody
+R65
+R67
+R2
+R3
+l0
+L85
+VIc]Y]]A311H^BWF_eUJd31
+!s100 S1fOKBE`B=L4m]6BEo3c?3
+R6
+32
+R178
+!i10b 1
+R179
+R180
+R181
+!i113 1
+R11
+R12

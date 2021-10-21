@@ -1,0 +1,37 @@
+module streamFIFO(
+// QSYS interface
+	input csi_clk,
+	input rsi_reset_n,
+	//Avalon ST interface
+	output asi_ready = 1'b1,
+	input	 asi_valid,
+	input	 [63:0] asi_data,
+	//Peripheral Interface
+	output [63:0] fifo_data,
+	output fifo_write,
+	output wire fifo_send
+	);
+	reg send_flag = 1'b0;
+	reg FSM = 1'b0;
+	assign fifo_write = asi_valid; // write word to fifo
+	assign fifo_data = asi_data; //connecting avalon to fifo
+	always @(posedge csi_clk)
+		begin
+			case(FSM)
+				1'b0:
+				begin
+					send_flag = 1'b0;
+					if(asi_valid) FSM <= 1'b1;
+				end
+				1'b1:
+				begin
+					if(~asi_valid)
+					 begin
+						send_flag = 1'b1;
+						FSM <= 1'b0;
+					 end
+				end
+				endcase		
+			end
+	assign fifo_send = send_flag;
+endmodule

@@ -1,0 +1,30 @@
+<internal_error>
+<sub_system>ERR</sub_system>
+<callstack>
+	 0xa9fdc5b8: ccl_err + 0xa5b8 (_ZN15ERR_STACKWALKER15get_stack_traceEPPKviiPv + 0x90)
+	 0xa9fdf76b: ccl_err + 0xd76b (_Z14err_terminatorv + 0x8a)
+	 0xa9f4f07e: dinkum_alt + 0x1707e (_ZSt9terminatev + 0x1e)
+	 0xa9005a41: stdc++.so.6 + 0xb0a41
+	 0xa9f62813: dinkum_alt + 0x2a813 (_ZNK11_Dinkum_std12_String_base5_XranEv + 0x133)
+	  0x80f75f9: quartus_rpp + 0xaf5f9 (_ZN31RPP_STATE_MACHINE_ENCODING_INFO32process_state_machines_encodingsERN11_Dinkum_std14basic_ifstreamIcNS0_11char_traitsIcEEEE + 0x307)
+	  0x80f8c7b: quartus_rpp + 0xb0c7b (_ZN31RPP_STATE_MACHINE_ENCODING_INFO21extract_encoding_infoEP10CMP_FACADEP25RVD_STATE_MACHINE_LOCATER + 0x2bf)
+	  0x811097e: quartus_rpp + 0xc897e (_ZN12RPP_SGATE_OP9executingEP10CMP_FACADERbS2_S2_b + 0x7b4)
+	  0x8064252: quartus_rpp + 0x1c252 (_ZN13RPP_FRAMEWORK7executeEv + 0x68)
+	 0xb58ec52a: comp_qexe + 0x1552a (_Z18qexe_standard_mainP14QEXE_FRAMEWORKPPK22QEXE_OPTION_DEFINITIONiPPKc + 0x63c)
+	  0x807cae5: quartus_rpp + 0x34ae5 (_Z8rpp_mainiPPKc + 0x68)
+	 0xaa621908: ccl_msg + 0x23908 (_Z15msg_main_threadPv + 0x18)
+	 0xa9f99f9e: ccl_thr + 0x5f9e (thr_final_wrapper + 0xe)
+	 0xaa622625: ccl_msg + 0x24625 (_Z18msg_thread_wrapperPFPvS_ES_ + 0x6c)
+	  0x816cfcd: quartus_rpp + 0x124fcd (_Z18mem_thread_wrapperPFPvS_ES_ + 0xdd)
+	 0xa9fe1fd8: ccl_err + 0xffd8 (_Z18err_thread_wrapperPFPvS_ES_ + 0x2a)
+	 0xa9f9a3fa: ccl_thr + 0x63fa (thr_thread_wrapper + 0x2f)
+	 0xaa634e9a: ccl_msg + 0x36e9a (_Z12msg_exe_mainiPPKcPFiiS1_E + 0xb7)
+	  0x80643b8: quartus_rpp + 0x1c3b8 (main + 0x3d)
+	 0xa8d704d3: c.so.6 + 0x194d3 (__libc_start_main + 0xf3)
+	  0x80623b1: quartus_rpp + 0x1a3b1
+</callstack>
+<error>*** Fatal Error: Unhandled Exception</error>
+<date>Mon Mar 17 10:02:29 2014
+</date>
+<version>Version 13.0.0 Build 156 04/24/2013 SJ Full Version</version>
+</internal_error>

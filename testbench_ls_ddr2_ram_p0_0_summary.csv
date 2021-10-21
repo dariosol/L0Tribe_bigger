@@ -1,0 +1,29 @@
+Core: testbench_ls_ddr2_ram_p0 - Instance: u0|ddr2_ram
+Path, Setup Margin, Hold Margin
+"Address Command (Slow 900mV 85C Model)",0.192,0.597
+"Bus Turnaround Time (Slow 900mV 85C Model)",5.446,--
+"Core (Slow 900mV 85C Model)",-0.623,0.178
+"Core Recovery/Removal (Slow 900mV 85C Model)",0.473,0.465
+"Read Capture (Slow 900mV 85C Model)",0.292,0.244
+"Read Resync (Slow 900mV 85C Model)",2.988,25.518
+"Write (Slow 900mV 85C Model)",0.141,0.141
+"Write Leveling tDQSS (Slow 900mV 85C Model)",0.571,0.571
+"Write Leveling tDSS/tDSH (Slow 900mV 85C Model)",0.624,0.624
+"Address Command (Slow 900mV 0C Model)",0.178,0.652
+"Bus Turnaround Time (Slow 900mV 0C Model)",5.47,--
+"Core (Slow 900mV 0C Model)",-0.313,0.235
+"Core Recovery/Removal (Slow 900mV 0C Model)",0.642,0.453
+"Read Capture (Slow 900mV 0C Model)",0.294,0.246
+"Read Resync (Slow 900mV 0C Model)",3.029,25.56
+"Write (Slow 900mV 0C Model)",0.193,0.193
+"Write Leveling tDQSS (Slow 900mV 0C Model)",0.571,0.571
+"Write Leveling tDSS/tDSH (Slow 900mV 0C Model)",0.624,0.624
+"Address Command (Fast 900mV 0C Model)",0.134,0.835
+"Bus Turnaround Time (Fast 900mV 0C Model)",5.515,--
+"Core (Fast 900mV 0C Model)",0.372,0.112
+"Core Recovery/Removal (Fast 900mV 0C Model)",1.875,0.255
+"Read Capture (Fast 900mV 0C Model)",0.325,0.277
+"Read Resync (Fast 900mV 0C Model)",3.623,26.161
+"Write (Fast 900mV 0C Model)",0.156,0.156
+"Write Leveling tDQSS (Fast 900mV 0C Model)",0.571,0.571
+"Write Leveling tDSS/tDSH (Fast 900mV 0C Model)",0.624,0.624

@@ -1,0 +1,143 @@
+!SESSION 2020-02-20 14:04:47.833 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/na62torino/altera/16.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -data /home/na62torino/Data/TestBench_CLONE_RECOVERED/software/TestBench_FW -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/na62torino/altera/16.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.ui 2 0 2020-02-20 14:04:48.982
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-02-20 14:04:48.982
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.linuxtools.systemtap.ui.graphing', id='org.eclipse.linuxtools.systemtap.ui.graphing.commands.SaveGraphImage', categoryId='org.eclipse.linuxtools.systemtap.ui.graphing.category.file'
+
+!ENTRY org.eclipse.ui 2 0 2020-02-20 14:04:49.302
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-02-20 14:04:49.302
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.linuxtools.systemtap.ui.graphing', id='org.eclipse.linuxtools.systemtap.ui.graphing.commands.SaveGraphImage', categoryId='org.eclipse.linuxtools.systemtap.ui.graphing.category.file'
+!SESSION 2020-07-07 15:31:07.045 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/na62torino/altera/16.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -data /home/na62torino/Data/L0Tribe/l0tribe_BEFORE_REMOVING_INTERRUPTS/software/TestBench_FW -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/na62torino/altera/16.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.ui 2 0 2020-07-07 15:31:11.629
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-07-07 15:31:11.629
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.linuxtools.systemtap.ui.graphing', id='org.eclipse.linuxtools.systemtap.ui.graphing.commands.SaveGraphImage', categoryId='org.eclipse.linuxtools.systemtap.ui.graphing.category.file'
+
+!ENTRY org.eclipse.ui 2 0 2020-07-07 15:31:11.923
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-07-07 15:31:11.923
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.linuxtools.systemtap.ui.graphing', id='org.eclipse.linuxtools.systemtap.ui.graphing.commands.SaveGraphImage', categoryId='org.eclipse.linuxtools.systemtap.ui.graphing.category.file'
+!SESSION 2020-07-07 15:31:44.727 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/na62torino/altera/16.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -data /home/na62torino/Data/L0Tribe/l0tribe_BEFORE_REMOVING_INTERRUPTS/software/TestBench_FW -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/na62torino/altera/16.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.ui 2 0 2020-07-07 15:31:49.090
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-07-07 15:31:49.090
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.linuxtools.systemtap.ui.graphing', id='org.eclipse.linuxtools.systemtap.ui.graphing.commands.SaveGraphImage', categoryId='org.eclipse.linuxtools.systemtap.ui.graphing.category.file'
+
+!ENTRY org.eclipse.ui 2 0 2020-07-07 15:31:49.389
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-07-07 15:31:49.390
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.linuxtools.systemtap.ui.graphing', id='org.eclipse.linuxtools.systemtap.ui.graphing.commands.SaveGraphImage', categoryId='org.eclipse.linuxtools.systemtap.ui.graphing.category.file'
+!SESSION 2020-07-07 15:32:01.782 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/na62torino/altera/16.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/na62torino/altera/16.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.ui 2 0 2020-07-07 15:32:06.204
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-07-07 15:32:06.204
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.linuxtools.systemtap.ui.graphing', id='org.eclipse.linuxtools.systemtap.ui.graphing.commands.SaveGraphImage', categoryId='org.eclipse.linuxtools.systemtap.ui.graphing.category.file'
+
+!ENTRY org.eclipse.ui 2 0 2020-07-07 15:32:06.513
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-07-07 15:32:06.513
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.linuxtools.systemtap.ui.graphing', id='org.eclipse.linuxtools.systemtap.ui.graphing.commands.SaveGraphImage', categoryId='org.eclipse.linuxtools.systemtap.ui.graphing.category.file'
+!SESSION 2020-07-07 15:32:22.947 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/na62torino/altera/16.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/na62torino/altera/16.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.ui 2 0 2020-07-07 15:32:27.329
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-07-07 15:32:27.329
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.linuxtools.systemtap.ui.graphing', id='org.eclipse.linuxtools.systemtap.ui.graphing.commands.SaveGraphImage', categoryId='org.eclipse.linuxtools.systemtap.ui.graphing.category.file'
+
+!ENTRY org.eclipse.ui 2 0 2020-07-07 15:32:27.626
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-07-07 15:32:27.626
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.linuxtools.systemtap.ui.graphing', id='org.eclipse.linuxtools.systemtap.ui.graphing.commands.SaveGraphImage', categoryId='org.eclipse.linuxtools.systemtap.ui.graphing.category.file'
+!SESSION 2020-07-07 15:32:52.145 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/na62torino/altera/16.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -data /home/na62torino/Data/L0Tribe/l0tribe_BEFORE_REMOVING_INTERRUPTS/software/TestBench_FW -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/na62torino/altera/16.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.ui 2 0 2020-07-07 15:32:56.522
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-07-07 15:32:56.522
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.linuxtools.systemtap.ui.graphing', id='org.eclipse.linuxtools.systemtap.ui.graphing.commands.SaveGraphImage', categoryId='org.eclipse.linuxtools.systemtap.ui.graphing.category.file'
+
+!ENTRY org.eclipse.ui 2 0 2020-07-07 15:32:56.814
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-07-07 15:32:56.814
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.linuxtools.systemtap.ui.graphing', id='org.eclipse.linuxtools.systemtap.ui.graphing.commands.SaveGraphImage', categoryId='org.eclipse.linuxtools.systemtap.ui.graphing.category.file'
+!SESSION 2020-07-07 15:46:42.249 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/na62torino/altera/16.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -data /home/na62torino/Data/L0Tribe/l0tribe_BEFORE_REMOVING_INTERRUPTS/software/TestBench_FW -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/na62torino/altera/16.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.ui 2 0 2020-07-07 15:46:46.625
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-07-07 15:46:46.625
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.linuxtools.systemtap.ui.graphing', id='org.eclipse.linuxtools.systemtap.ui.graphing.commands.SaveGraphImage', categoryId='org.eclipse.linuxtools.systemtap.ui.graphing.category.file'
+
+!ENTRY org.eclipse.ui 2 0 2020-07-07 15:46:46.917
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-07-07 15:46:46.917
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.linuxtools.systemtap.ui.graphing', id='org.eclipse.linuxtools.systemtap.ui.graphing.commands.SaveGraphImage', categoryId='org.eclipse.linuxtools.systemtap.ui.graphing.category.file'
+!SESSION 2020-08-14 16:21:14.694 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/dsoldi/altera/16.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/dsoldi/altera/16.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.ui 2 0 2020-08-14 16:21:32.374
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-08-14 16:21:32.374
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.linuxtools.systemtap.ui.graphing', id='org.eclipse.linuxtools.systemtap.ui.graphing.commands.SaveGraphImage', categoryId='org.eclipse.linuxtools.systemtap.ui.graphing.category.file'
+
+!ENTRY org.eclipse.ui 2 0 2020-08-14 16:21:32.581
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-08-14 16:21:32.581
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.linuxtools.systemtap.ui.graphing', id='org.eclipse.linuxtools.systemtap.ui.graphing.commands.SaveGraphImage', categoryId='org.eclipse.linuxtools.systemtap.ui.graphing.category.file'
+
+!ENTRY org.eclipse.core.jobs 4 2 2020-08-14 16:21:54.464
+!MESSAGE An internal error occurred during: "Generating Library Hover help for installed devhelp documentation".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.linuxtools.internal.cdt.libhover.devhelp.DevHelpPlugin$DevhelpStartupJob.run(DevHelpPlugin.java:119)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
